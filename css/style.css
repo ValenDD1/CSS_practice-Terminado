@@ -1,0 +1,41 @@
+:root {
+    --primary-color: rgb(86, 156, 139);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 20px;
+    padding: 10px;
+    cursor: zoom-in;
+}
+
+header {
+    text-align: center;
+    border: 1px solid green;
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    border: 1px solid red;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+body {
+    background-color: lightblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+main {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+
