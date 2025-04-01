@@ -1,0 +1,16 @@
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1{
+    text-align: center;
+    color: red;
+    /*que el teto*/
+    text-transform: uppercase;
+}
+
+li:not(:empty):first-letter {
+    color: red;
+}
