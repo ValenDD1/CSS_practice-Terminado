@@ -1,0 +1,43 @@
+/*usando unidade absolutas*/
+#caja{
+    width: 300px;
+    height: 200px;
+    background-color: indigo;
+}
+
+
+/*usando unidades relativas*/
+#container{
+    font-size: 1 rem;
+}
+
+/*usando unidades relacionadas al viewport*/
+body{
+    margin: 0;/*usar un reset del margin por defecto que nos da el navegador por defecto*/
+}
+
+#container2{
+    width: 15.625vw;
+    height: 5.208vw;
+    background-color: indigo;
+}
+
+/* unidades de direccion */
+#container3{
+    background-image: url('../../images/Captura\ de\ pantalla\ 2025-05-01\ 203631.png');
+    width: 400px;
+    height: 400px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#container4{
+    background-color: tomato;
+    height: 300px;
+    transition: height 1s linear ;
+}
+
+
+
+
+
+
