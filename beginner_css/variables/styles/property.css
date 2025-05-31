@@ -1,0 +1,49 @@
+:root{
+    --x:0;
+}
+
+
+.contenedor{
+    width: 100px;
+    height: 100px;
+    width: 150px;
+    height: 150px;
+    background: red;
+    animation: move 2s alternate infinite;
+    translate: var(--x) 0;
+}
+
+@keyframes move {
+    to{
+        --x:300px;
+    }
+}
+
+@property --a{
+    syntax: '<length>';
+    inherits: false;
+    initial-value: 0;
+}
+
+.contenedor-property{
+    width: 100px;
+    height: 100px;
+    width: 150px;
+    height: 150px;
+    background: red;
+    animation: move2 2s alternate infinite;
+    translate: var(--a) 0;
+}
+@keyframes move2 {
+    to{
+        --a:300px;
+    }
+}
+
+.property-js{
+    width:150px;
+    height:150px;
+    background-color: var(--color);
+    color:white;
+    display: grid; place-items: center;
+}

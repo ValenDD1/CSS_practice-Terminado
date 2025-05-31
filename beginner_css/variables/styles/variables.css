@@ -1,0 +1,96 @@
+:root{
+    --primera-variable:rgb(32, 90, 145);
+    --color-red:rgb(219, 57, 57);
+}
+
+.entorno>p{
+    color:var(--color-red);
+}
+main{
+    background-color: var(--primera-variable,--variable-q,black);
+    color:#fff
+}
+
+.contenedor-padre{
+    padding: 10px;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 100px;
+    background-color: indigo;
+    color: #fff;
+    --var-contenedor-padre:black;
+    font-size: 20px;
+
+}
+
+.contenedor{
+    background-color: var(--var-contenedor-padre);
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 50px;
+}
+.first{
+    --var-contenedor-padre:rgb(177, 69, 69);
+}
+
+.contenedor-local{
+    width: 20%;
+    --bakcground-color:rgb(78, 8, 8);
+    background-color: violet;
+    display: grid;
+    place-items: center;
+    height: 150px;
+    & .primero{
+        background-color: var(--bakcground-color);
+        width: 95%;
+        height: 95%;
+        display: grid;
+        place-items: center;
+        & .segundo{
+            background:linear-gradient(#f0ed40,var(--bakcground-color));
+            width: 95%;
+            height: 95%;
+            display: grid;
+            place-items: center;
+        }
+    }
+}
+
+.love-type{
+    --color:darkred;
+}
+.card{
+    border: 6px solid black;
+    max-width: 250px;
+    padding: 1rem;
+    box-shadow: 6px 6px 10px #000a;
+    background: linear-gradient(black, var(--color));
+    & .frame{
+        border: 6px solid black;
+        display: grid;
+        place-items: center;
+        background: #fff;
+        & h2{
+            color: #fff;
+            background-color: var(--color);
+        }
+        & img{
+            width: 20%;
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

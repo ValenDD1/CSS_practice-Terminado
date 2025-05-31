@@ -1,0 +1,23 @@
+*{
+    margin:0;
+    padding: 0;
+}
+:root{
+    --var-primary-color:rgb(197, 197, 228);
+}
+html{
+    font-size: larger;
+}
+body{
+    background-color: var(--var-primary-color);
+    color: black;
+}
+h1{
+    background: linear-gradient(blue,var(--var-primary-color));
+    color: var(--var-primary-color);
+}
+.element{
+    width: 100vw;
+    color: brown;
+    height: env(viewport-segment-height,100vh);
+}

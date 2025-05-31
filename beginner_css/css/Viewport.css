@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#vw{
+    width: 50vw;
+    height: 300px;
+    background-color: rgb(156, 156, 51);
+}
+
+#vh{
+    width: 150px;
+    height: 50vh;
+    background-color: rgb(53, 53, 206);
+}
+
+#vmin{
+    width: 50vmin;
+    height: 50vmin;
+    background-color: turquoise;
+}
+
+#vmax{
+    width: 50vmax;
+    height: 50vmax;
+    background-color: yellow;
+}
