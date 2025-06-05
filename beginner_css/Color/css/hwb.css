@@ -1,0 +1,14 @@
+#ejemplos{
+    --color: #e41526;
+    background-color: hwb( 120deg 23% 50% );
+    width: 10%;
+    height: 50px;
+    display: grid;
+    place-items: center;
+
+    & #item1{
+        background-color: hwb(from var(--color) h w b / 30% );
+        color: #fff;
+        padding: 10px;
+    }
+}

@@ -1,0 +1,76 @@
+:root{
+    --color-primary:rgb(144, 151, 83);
+    --color-secondary:rgb(32, 93, 97);
+}
+
+header{
+    text-align: center;
+    border-radius: 5px ;
+    border: 1px solid black;
+    text-transform: capitalize;
+    background-color: lab(20% -100 -34 / 20%);
+}
+
+main{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.combinacion{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.red{
+    background-color: red;
+    width: 10%;
+    height: 50px;
+}
+.blue{
+    background-color: blue;
+    width: 10%;
+    height: 50px;
+}
+.purple{
+    background-color: color-mix(in srgb, red, blue );
+    width: 10%;
+    height: 50px;
+}
+
+.colorfirst{
+    background-color: var(--color-primary);
+    width: 10%;
+    height: 50px;
+}
+.colorsecond{
+    background-color: var(--color-secondary);
+    width: 10%;
+    height: 50px;
+}
+/*hay varias forams de hacer combinaciones*/
+
+/*default*/
+.result{
+    background-color: color-mix(in srgb-linear, var(--color-primary) ,var(--color-secondary) );
+    width: 10%;
+    height: 50px;
+}
+/*por porcentajes simpre tiene que salir 100%*/
+.result{
+    background-color: color-mix(in srgb-linear, var(--color-primary) 10% ,var(--color-secondary) 90% );
+    width: 10%;
+    height: 50px;
+}
+
+/* espacios de colores polares */
+.result{
+    background-color: color-mix(in oklab, var(--color-primary) 10% ,var(--color-secondary) 90% );
+    width: 10%;
+    height: 50px;
+}
+/* con un espacio polarizado ,con incrementacion con hue */
+.result{
+    background-color: color-mix(in hwb shorter hue , var(--color-primary) , var(--color-secondary));
+}

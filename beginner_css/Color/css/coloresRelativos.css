@@ -1,0 +1,31 @@
+:root{
+    --primary-color: #5634FF;
+}
+
+/* mostrar la forma de from  */
+.relativo1{
+    background-color: rgb(from red r g b );
+    width: 100px;
+    height: 100px;
+}
+/* mostrar el uso de from ,aqui le pusimos en alpha un 50% de transparencia */
+.relativo2{
+    background-color: rgb(from var(--primary-color) r g b / 50% );
+    width: 100px;
+    height: 100px;
+}
+
+/*from con calc() de rgb a hsl (parece ser no optimo)*/
+.relativo3{
+    --color: rgb(181 228 107);
+    width: 100px;
+    height: 100px;
+    background-color: hsl(from var(--color) h s l / calc(alpha - 0.25) );
+}
+
+.relativo4{
+    --color: #ff0000;
+    width: 100px;
+    height: 100px;
+    background: rgb(from var(--color) r calc(g + 0.5) calc(b + 0.5));
+}

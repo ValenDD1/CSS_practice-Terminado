@@ -1,0 +1,22 @@
+#ejemplos{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.items{
+    width: 100px;
+    height: 100px;
+    border-radius: 9px;
+    border: 0.5 solid black;
+}
+
+.item1{ background-color: color(srgb 255 0 0); }
+.item2{ background-color: color(srgb-linear 255 0 0); }
+.item3{ background-color: color(display-p3 255 0 0); }
+.item4{ background-color: color(a98-rgb 255 0 0); }
+.item5{ background-color: color(rec2020 255 0 0); }
+.item6{ background-color: color(prophoto-rgb 255 0 0); }
+.item7{ background-color: color(xyz 255 0 0); }
+.item8{ background-color: color(xyz-d65 255 0 0); }
+.item9{ background-color: color(xyz-d50 255 0 0); }

@@ -1,0 +1,20 @@
+.ejemplos{
+    width: 100%;
+    background-color: rgb(224, 226, 228);
+    font-family: cursive;
+    & p{
+        color: hsl(0, 26%, 43%);
+    }
+    
+
+}
+.ejemplos .hsl-block:nth-of-type(1){
+    background-color: hsl(120deg 25% 75% / 50%);
+    width: 20%;
+    height: 100px;
+}
+.ejemplos .hsl-block:nth-of-type(2){
+    background-color: hsl(120deg 25% 75%);
+    width: 20%;
+    height: 100px;
+}

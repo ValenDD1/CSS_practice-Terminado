@@ -1,0 +1,26 @@
+#ejemplos{
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid magenta;
+    padding: 2px;
+}
+.padre{
+    width: 30%;
+    height: 100px;
+    border-radius: 10px;
+}
+.hijo1{
+    background-color: lch(100% 89 18deg);
+}
+.hijo2{background-color: lch(95% 89 18deg);}
+.hijo3{background-color: lch(90% 89 18deg);}
+.hijo4{background-color: lch(80% 89 18deg);}
+.hijo5{background-color: lch(70% 89 18deg);}
+
+/*ejemplos con oklab*/
+.hijo6{background-color: oklch(95% 0.1 360deg /100%);}
+.hijo7{background-color: oklch(90% 0.1 360deg /90%);}
+.hijo8{background-color: oklch(80% 0.1 360deg /80%);}
+.hijo9{background-color: oklch(70% 0.1 360deg /70%);}
+.hijo10{background-color: oklch(60% 0.1 360deg /60%);}
+
