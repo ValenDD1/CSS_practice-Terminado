@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/property.css">
+</head>
+<body>
+    <header>
+        <h1>variables Property</h1>
+        <p>
+            ponerle propiedad a la variable es lo mismo que ponerle un valor
+            solo que este tendra mas seguridad al momento de usarlo 
+        </p>
+    </header>
+    <main>
+        <p>Ejemplos:</p>
+        <p>este contenido se ve fatal ya que css no detecta si es px o un color ,etc</p>
+        <div class="contenedor" >
+        </div>
+        <p>aqui agregamos property y se ve mejor que antes</p>
+        <div class="contenedor-property">
+        </div>
+        <p>aqui creamos una variable con property en js</p>
+        <div class="property-js" >JS</div>
+
+    </main>
+    <script>
+        CSS.registerProperty({
+                name: "--color",
+                syntax: "<color>",
+                initialValue: "indigo",
+                inherits: false,
+            })
+    </script>
+
+
+</body>
+</html>

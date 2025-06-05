@@ -1,0 +1,25 @@
+
+main p{
+    color: #ffffff;
+    background-color: #000;
+    width: 50%;
+}
+
+main #hexa{
+    color: #f00;
+    font-size: 20px;
+    background-color: #97D;
+    width: 3em;
+}
+
+#hexa+#hexargba{
+    color: #17ff5647;
+    font-weight: bold;
+    font-size: larger;
+    font-style: italic;
+    background-color: #aa44bb77;
+}
+
+html{
+    background-color: #f027;
+}

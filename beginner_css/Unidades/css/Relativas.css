@@ -1,0 +1,56 @@
+/*elementos raiz*/
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    font-size: 22px;
+}
+/*clase padre de los divs ejemplos*/
+#father{
+    width: 300px;
+    height: 300px;
+    background-color: rgb(153, 150, 155);
+    font-size: 32px;
+}
+
+#porcentajes{
+    width: 30%;
+    height: 100px;
+    color: white;
+    background-color: indigo;
+}
+#em{
+    background-color: blue;
+    color:white;
+    width: 2em;
+    height: 2em;
+}
+
+h1{
+    font-size: 1.5rem;
+    color:red;
+}
+h2{
+    font-size: 1.3rem;
+    color: blue;
+}
+
+#father2{
+    width: 300px;
+    height: 300px;
+    background-color: red;
+}
+#ex{
+    width: 1.5ex;
+    height: 1.5ex;
+    background-color: blue;
+    
+}
+.element {
+    font-family: "Victor Mono", monospace;
+    font-size: 2rem;
+    background: #111;
+    color: #eee;
+    width: 10ch;
+}

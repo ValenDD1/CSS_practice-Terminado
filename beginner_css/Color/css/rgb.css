@@ -1,0 +1,34 @@
+
+/*esto es una antigua practica ,legacy*/
+h3+p{
+    color:rgba(192, 140, 140, 0.8);
+    font-size: 20px;
+}
+
+/*esto es una mejor forma de escribir en rgb o rgba sin las comillas (,)*/
+p+#perro{
+    background-color: rgb(100% 50% 25% / 50%);
+    color: white;
+    font-size: 20px;
+}
+.colores-rgb{
+    font-size: 30px;
+    font-weight: 800;
+    font-family: cursive;
+    text-transform: capitalize;
+}
+
+.colores-rgb p:nth-child(1){
+    color: rgb(30 56 78)
+}
+.colores-rgb p:nth-child(2){
+    color: rgb(30 56 78 /50%)
+}
+.colores-rgb p:nth-child(3){
+    color: rgb(240, 47, 159)
+}
+
+
+
+
+

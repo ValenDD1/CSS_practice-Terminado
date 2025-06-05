@@ -1,0 +1,58 @@
+#ejemplos{
+    border-radius: 5px;
+    border:1px solid black;
+    width: 80%;
+    padding: 10px;
+    display: grid;
+    place-items: center;
+}
+.bloque{
+    width: 20%;
+    height: 50px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.item1{
+    background-color: lab(100% -125 -125);
+    
+}
+.item2{
+    background-color: lab(50 -34 -10);
+}
+.item3{
+    background-color: lab(33.18% 52.64 38.04);
+    
+}
+.item4{
+    background-color: lab(51.3% 45.95 -48.51 / 0.24);
+}
+.item5{
+    background-color: lab(20 -11% -10%);
+}
+.item6{
+    background-color: lab(38.27% 24.03 -0.73 /40%);
+}
+.item7{
+    background-color: lab(33.18% 52.64 38.04/10%);
+}
+.item8{
+    background-color: lab(51.3% 45.95 -48.51 / 0.9);
+}
+
+/*con Oklab*/
+.item9{
+    background-color: oklab(100% -0.4 -0.4);
+}
+.item10{
+    background-color: oklab(80% 0.2 -0.2 / 0.75);
+}
+.item11{
+    background-color: oklab(30% 0.1 -0.024 / 10%);
+}
+.item12{
+    background-color: oklab(70% 0.2 -0.2 / 0.75);
+}
+.item13{
+    background-color: oklab(70% 0.1 -0.024 / 10%);
+}
