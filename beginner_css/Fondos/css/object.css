@@ -1,0 +1,38 @@
+.ejemplo1
+.ejemplo2{
+    display: flex;
+}
+
+.image{
+    width: 150px;
+    height: 150px;
+    background-color: gray;
+}
+.item1{ object-fit: contain; }
+.item2{ object-fit: cover; }
+.item3{ object-fit: fill; }
+.item4{ object-fit: none; }
+.item5{ object-fit: scale-down; }
+
+.iamgen{
+    object-fit: none;
+    background-color: gray;
+    object-position: left 30% top 10%;
+    width: 50%;
+    height: 300px;
+}
+
+
+.objeto{
+    width: 50%;
+    height: auto;
+    background-color: gray;
+    object-fit: cover;
+    object-view-box: inset(0% 0% 0% 0%) ;
+    transition: all 0.5s;
+}
+
+.objeto:hover{
+    object-view-box: inset(20% 20% 20% 20%) ;
+
+}
