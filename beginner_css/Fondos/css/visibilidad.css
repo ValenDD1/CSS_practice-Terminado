@@ -1,0 +1,47 @@
+:root{
+    --opacidad:0;
+}
+
+.items{
+    width: 30%;
+    height: 500px;
+    display: flex;
+    gap: 10px;
+}
+.item1{
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: indigo;
+    color: lightblue;
+    font-size: 2.5rem;
+    display: grid;
+    place-items: center;
+}
+.item2{
+    width: 50px;
+    background-color: indigo;
+    height: 50px;
+    border-radius: 5px;
+    color: lightblue;
+    font-size: 2.5rem;
+    display: grid;
+    place-items: center;
+}
+.item3{
+    width: 50px;
+    background-color: indigo;
+    height: 50px;
+    border-radius: 5px;
+    color: lightblue;
+    font-size: 2.5rem;
+    display: grid;
+    place-items: center;
+}
+
+/*
+    display:none
+    visibility: hidden
+    opacity:0
+
+*/
