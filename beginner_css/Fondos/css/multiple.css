@@ -1,0 +1,31 @@
+:root{
+    --fondo:white;
+}
+
+
+.element{
+    width: 50%;
+    height:500px;
+    background-image: url(../images/logo_mario.png),url(../images/playa.jpg) ;
+    background-size: 40%,cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.element2{
+    width: 50%;
+    height: 500px;
+    background-image: radial-gradient(transparent, #a83f3f);
+}
+.element3{
+    width: 50%;
+    height: 500px;
+    background: 
+        url(../images/logo_mario.png) center /40% no-repeat,
+        radial-gradient(transparent , #000) ,
+        url(../images/arbol-solitario_181624-46361.avif) 
+    ;
+}
+
+

@@ -1,0 +1,65 @@
+body{
+    /*necesariamente no tiene que ser una ruta en una carpeta tambien puede ser una url de una imagen*/
+    background-image:url(../images/arbol-solitario_181624-46361.avif);
+    background-repeat: round;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+main{
+    display: grid;
+    place-items: center;
+}
+
+.detalles{
+    border: 1px solid white;
+    background-color: color-mix(in srgb,red 40%, #89f 60%);
+    width: 30%;
+}
+.container{
+    display: grid;
+    place-items: center;
+}
+ul{
+    list-style-type: none;
+}
+.contenedora-imagen{
+    width: 600px;height: 600px;
+    background-repeat: no-repeat;
+    border: 5px dashed green;
+    background-size: 50%;
+    background-color: white;
+    background-image: url(../images/instagram.png)  ;
+    background-position:  right top;
+}
+
+
+/*como agrupar todas las propiedades vistas*/
+.ejemplo{
+
+    /*ejemplo de ataho completo*/
+    background: 
+        #fff  /* color */
+        url("mi_imagen.jpg") /*imagen*/
+        50%  /*position*/ / cover /*size*/
+        repeat-x  /*repeat*/
+        fixed /*attachment*/
+        border-box  /*origin*/
+        padding-box /*clip*/ ;
+
+    /*ejemplo de atajo simple*/
+    background: #fff url("imagen.jpg") top center repeat-x;
+
+
+    /*ejemplo de atajo multiple (,)*/
+    background:
+        url("primer-plano.jpg") center center / cover, /*primer*/
+        deeppink url("imagen.jpg") 0 0 / 150px space scroll padding-box padding-box; /*segundo*/
+}
+
+
+
+
+
+
+

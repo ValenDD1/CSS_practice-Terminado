@@ -1,0 +1,34 @@
+/*como funciona image set
+
+se podria decir que es como usar la etiqueta picture para poder tener un fallback de imagenes
+y guardar varias imagenescon condicionales,si el navegador lo soporta ,si la cantidad ppp(pulgadas por pixeles )
+es compatible (1x 2x ,etc)
+
+teniendo toda esta info podemos dar unos ejemplos
+*/
+
+.box{
+    background: image-set(
+        url(../images/instagram.png) 1x,
+        url(../images/logo_mario.png) 2x
+    ) right / 20% no-repeat ;
+    width: 30%;
+    height: 100px;
+}
+.imagen{
+    background: image-set(
+        url(../images/arbol-solitario_181624-46361.avif) type("image/avif"),
+        url(../images/playa.jpg) type("image/jpeg")
+    ) center / cover no-repeat  ;
+    width: 30%;
+    height: 100px;
+}
+
+.linear{
+    background-image: image-set(
+        linear-gradient(indigo, black) 1x,
+        url(../images/playa.jpg) 2x
+    );
+    width: 30%;
+    height: 100px;
+}

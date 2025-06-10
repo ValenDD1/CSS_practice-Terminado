@@ -1,0 +1,6 @@
+img{
+    image-rendering: pixelated;
+    image-orientation: from-image;
+    width: 300px;
+    height: auto;
+}

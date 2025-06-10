@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/visibilidad.css">
+</head>
+<body>
+    <header>
+        <h1>Visibilidad</h1>
+    </header>
+    <main>
+        Ejemplos 
+        <div class="items" >
+            <div class="item1" onclick="style.display='none'"  id="1" >1</div>
+            <div class="item2" onclick="style.visibility='hidden'" id="2">2</div>
+            <div class="item3" onclick="style.opacity='0'" id="3" >3</div>
+        </div>
+        <button id="boton" > desaparecer un elemento</button>
+    </main>
+    <script>
+        const boton=document.getElementById("boton");
+        boton.addEventListener("click",desaparecer);
+        function desaparecer (){
+            const random=Math.floor(Math.random() * 3)+1;
+            const item=document.getElementById(random.toString());
+            if (item && item.style.visibility!=="hidden" ){
+                item.style.visibility="hidden";
+                console.log("ocultando item:",random);
+            }
+        }
+    </script>
+</body>
+</html>
