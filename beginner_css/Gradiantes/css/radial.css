@@ -1,0 +1,76 @@
+.flexing{
+    display: flex;
+    flex-wrap: wrap;gap:1.2rem;
+}
+
+.circulo{
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    
+}
+
+.item-1{
+    background-image: radial-gradient( circle ,red ,blue );
+}
+.item-2{
+    background: radial-gradient(ellipse,red,green);
+}
+.item-3{
+    background-image: radial-gradient(circle 400px,aliceblue,rgb(123,0,0));
+}
+.item-4{
+    background-image: radial-gradient(ellipse 400px 100px,aliceblue,rgb(123,0,0));
+}
+.item-5{
+    background-image: radial-gradient(circle at 100px -20px ,royalblue,chocolate,green,rgba(71, 69, 69, 0.308));
+}
+.item-6{
+    background-image: radial-gradient(circle at top left ,red,green,yellow,blue );
+}
+.item-7{
+    background-image: radial-gradient(
+        red 0% 20%,
+        aliceblue 30% 100%
+    );
+}
+.item-8{
+    background-image: radial-gradient(
+        ellipse 100px 200px at 200px 250px ,
+        hsl(123deg 40% 5.6% / 40%) 0% 50% ,
+        rgb(1223 4 5 / 45%) 60% 80% ,
+        #785 95% 100%
+    );
+}
+.item-9{
+    background-image: radial-gradient(
+        ellipse 100px 200px at 200px 250px ,
+        red 0% 10% ,
+        green 10% 20%,
+        blue 20% 30%,
+        yellow 40% 50%,
+        aliceblue 50% 60%,
+        royalblue 60% 80%,
+        chocolate 80% 
+    );
+}
+.item-10{
+    background-image: repeating-radial-gradient(
+        ellipse 50px 50px ,
+        red 0% 20%,
+        rgb(143, 6, 6) 20% 40%
+    );
+}
+
+.item-11{
+    background: 
+        radial-gradient(circle, transparent,#000),
+        linear-gradient(to left ,transparent,blue),
+        repeating-radial-gradient(
+            ellipse 100px 100px at 50% 20%,
+            royalblue 0% 30%,
+            yellow 40% 70%
+            
+        )
+    ;
+}
