@@ -1,0 +1,78 @@
+:root{
+    --first-color: rgb(234,67,89);
+    --second-color: blue;
+}
+
+
+.container{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+.flexing{
+    display: flex;
+    gap:1.3rem;
+    flex-wrap: wrap; /*sirve para no romper los tamaños*/
+}
+
+
+.ejemplo1{
+    
+    background: linear-gradient(var(--first-color) , var(--second-color)  );
+}
+
+.ejemplo2{
+    background: linear-gradient( to right, var(--first-color) , var(--second-color)  );
+}
+
+.ejemplo3{
+    background: linear-gradient( to top, var(--first-color) , var(--second-color)  );
+}
+
+.ejemplo4{
+    background: linear-gradient( 34grad, var(--first-color)  , var(--second-color)   );
+}
+.ejemplo5{
+    background:linear-gradient( 135deg , aliceblue , chocolate  );
+}
+.ejemplo6{
+    background:linear-gradient( 4.5rad , aliceblue , chocolate  );
+}
+.ejemplo7{
+    background: linear-gradient( 0.31turn, royalblue , darksalmon  );
+}
+.ejemplo8{
+    background: linear-gradient( to top left , var(--first-color) , var(--second-color),aliceblue, chocolate,green,red,yellow  );
+}
+.ejemplo9{
+    background: linear-gradient(0.14rad, red 0% 50%  ,yellow 50% 100% );
+}
+.ejemplo10{
+    background: linear-gradient(4.14rad, red 20%  ,yellow 80% );
+}
+.ejemplo11{
+    background: 
+        linear-gradient(to top, indigo ,hsl(0 24% 70% /20%)),
+        linear-gradient(1.4turn, transparent , var(--first-color))
+    ;
+}
+.ejemplo12{
+    background: linear-gradient( to top  , red 0% 20%,blue 20% 40%,yellow 40% 60% ,green 60% 80%,indigo 80%  100%); 
+}
+.ejemplo13{
+    background: linear-gradient(to top,transparent ,#000),
+    linear-gradient(
+        to bottom right,
+        red 0% 25% ,
+        blue 30% 34% ,
+        red 50% 80%,
+        blue 80% 100% 
+    );
+}
+.ejemplo14{
+    background: repeating-linear-gradient(
+        to bottom right,
+        red 0% 25%,
+        blue 30% 34%
+    )
+}
