@@ -31,7 +31,7 @@
     height: 200px;
     background-color: rgb(145, 56, 145);
     color: #fff;
-    overflow: scroll;
+    overflow-y:scroll;
 }
 
 .height-content-max{
