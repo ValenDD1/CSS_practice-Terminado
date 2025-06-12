@@ -1,0 +1,17 @@
+.content-box{
+    width: 200px;
+    height: 200px;
+    background-color: aquamarine;
+    border: 10px solid red;
+    padding: 20px;
+    margin: 20px;
+}
+.border-box{
+    box-sizing: border-box;
+    width: 200px;
+    height: 200px;
+    background-color: aquamarine;
+    border: 10px solid red;
+    padding: 20px;
+    margin: 20px;
+}
