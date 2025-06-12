@@ -1,0 +1,23 @@
+.elemento1{
+    border: 1px solid black;
+    width: 150px;
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.elemento2{
+    border: 1px solid rgb(207, 67, 67);
+    width: 150px;
+    height: 100px;
+    overflow: auto;
+}
+
+.elemento3{
+    border: 1px solid black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 115px;
+    font-size: 2.4rem;
+    height: 130px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
