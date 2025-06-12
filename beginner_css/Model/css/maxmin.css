@@ -1,0 +1,58 @@
+.contenedora{
+    width: 90vw;
+    background-color: gray;
+    margin: 1.2rem;
+}
+
+/*saber usar el max y el min*/
+.cuadro{
+    width: auto;
+    height: 200px;
+    min-width: 200px;
+    max-width: 700px;
+    background: indigo;
+}
+
+.heig{
+    width: 300px;
+    height: 100%;
+    min-height: 200px;
+    max-height: 800px;
+    background-color: greenyellow;
+}
+
+.max-content{
+    width: max-content;
+    height: 200px;
+    background-color: violet;
+}
+.min-content{
+    width: min-content;
+    height: 200px;
+    background-color: rgb(145, 56, 145);
+    color: #fff;
+    overflow: scroll;
+}
+
+.height-content-max{
+    width: 10%;
+    height: max-content;
+    background-color: rgb(90, 212, 119);
+    color: #fff;
+}
+.height-content-min{
+    width: 10%;
+    height: min-content;
+    background-color: rgb(13, 21, 94);
+    color: #fff;
+}
+.Aspect-ratio{
+    width: 400px;
+    aspect-ratio: 16/9;
+    background: linear-gradient(to top,red,blue);
+}
+img{
+    width: 200px;
+    object-position: left;
+    aspect-ratio: 16 / 9;
+}
