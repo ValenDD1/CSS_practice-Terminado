@@ -1,0 +1,73 @@
+
+
+.ejemplo{
+    display: grid;
+    border: 2px solid black;
+    margin-bottom: .25rem;
+    padding: 10px;
+    place-items: center;
+    & > button{
+        color: navy;
+        margin: 10px;
+        font-size:20px;
+        text-align: center;
+        border:solid ;
+        background: none;
+        cursor: pointer;
+        border-image-source: linear-gradient(to left,rgb(196, 45, 45),rgb(57, 101, 167));
+        border-image-outset: 1;
+        border-image-width: 1;
+        border-image-slice: 1 1 1 1;
+    }
+    .fill{
+        border-image-slice: 1 1 1 1 fill;
+    }
+
+}
+.ejemplo2{
+    --timing: linear(0, 0.3, 0.75, 1);
+    display: grid;
+    border: 2px solid black;
+    padding: 10px;
+    place-items: center;
+
+    & > button{
+        color: navy;
+        margin: 10px;
+        font-size:20px;
+        text-align: center;
+        border:solid ;
+        background: none;
+        cursor: pointer;
+        border-image-source: 
+            conic-gradient(from var(--a), indigo, purple, hotpink);
+        border-image-outset: 1;
+        border-image-width: 1;
+        border-image-slice: 1 1 1 1;
+        box-shadow: 5px 5px 0 #0006;
+        animation: move 1s infinite var(--timing);
+
+        &:active {
+            transform: translate(5px, 5px);
+            box-shadow: none;
+        }
+        
+    }
+    .fill{
+        border-image-slice: 1 1 1 1 fill;
+    }
+    
+    
+    
+}
+@keyframes move {
+    from { --a: 0deg; }
+    to { --a: 360deg; }
+}
+@property --a {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0deg;
+}
+
+
