@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/inicio.css">
+</head>
+<body>
+    <header>
+        <h1>Bordes en CSS</h1>
+        <p>
+            es la propiedad de nuestro modelo de caja en css,es facil de utilizar pero veremos cosas mas complejas
+        </p>
+    </header>
+    <main>
+        Ejemplos:
+        <div class="container" >
+            <div class="bordes" id="bordes"></div>
+            <div class="form">
+                <label for="style">Borde-style</label>
+                <select name="" id="style">
+                    <option value="dashed">dashed</option>
+                    <option value="double">double</option>
+                    <option value="hidden">hidden</option>
+                    <option value="dotted">dotted</option>
+                    <option value="solid">solid</option>
+                    <option value="groove">groove</option>
+                    <option value="ridge">ridge</option>
+                    <option value="inset">inset</option>
+                    <option value="outset">outset</option>
+                    <option selected disabled value="">seleccionar</option>
+                </select>
+                <br>
+                <label for="width">Borde-width</label>
+                <input id="width" type="numero">
+                <br>
+                <label for="color">border-color</label>
+                <input type="color" value="#fff" id="color">
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <p>enlace de la pagina relacionada a bordes</p>
+        <a href="https://lenguajecss.com/css/bordes/border/">ManzDev</a>
+    </footer>
+    <script>
+        const tamaño=document.getElementById("width");
+        const select=document.getElementById("style")
+        const color=document.getElementById("color")
+        const bloque=document.getElementById("bordes");
+        
+        function Bordes() {
+            const ancho = tamaño.value ? `${tamaño.value}px` : "0";
+            const colors= color.value ? `${color.value}` : "#fff";
+            const option=select.value ? `${select.value}` : "solid";
+
+            bloque.style.border=`${ancho} ${option} ${colors}`;
+        }
+        tamaño.addEventListener("input",Bordes)
+        select.addEventListener("change",Bordes)
+        color.addEventListener("input",Bordes)
+        
+    </script>
+</body>
+</html>
