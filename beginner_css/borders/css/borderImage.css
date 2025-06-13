@@ -1,0 +1,39 @@
+.boxing{
+    --border-width:40px;
+    --width:500px;
+    --height:200px;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    margin-top: var(--height);
+    margin-left: var(--height);
+    margin-bottom: var(--height);
+    padding-block-start: 30px;
+    border: var(--border-width) solid ;
+    
+    border-image: url("../images/borde-rosa.png");
+    border-image-width:var(--width) ;
+    border-image-slice: 500;
+    border-image-outset: 100px;
+    border-image-repeat: stretch;
+
+}
+
+.ejemplo2{
+    width: 200px;
+    height: 200px;
+    display: grid;
+    place-items: center;
+    overflow:auto;
+    border: 3px solid;
+    border-image: url("../images/borde-rosa.png");
+    border-image-width: 40px ;
+    border-image-slice: 100 fill;
+    border-image-outset: 80px 40px 40px 40px;
+    margin-inline-start: 20px;
+    margin-block-end: 20px;
+    border-image-repeat: stretch;
+    text-align: center;
+    padding: 10px;
+
+}
