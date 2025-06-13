@@ -1,0 +1,72 @@
+html{
+    --escritura: vertical-lr;
+    --primary:red
+}
+
+.box_initial{
+    width: 100px;
+    writing-mode: var(--escritura);
+    height: 100px;
+    color: #fff;
+    /*bordes en css,por el momento a que saber que existe formas de escribir los bordes*/
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: var(--primary);
+    border-top: 10px solid black;
+    border-bottom: 10px solid hotpink;
+}
+.box_logico{
+    width:300px;
+    font-size: 10px;
+    height:200px;
+    border-style: double ;
+    border-color: rgb(123 78 89);
+    border-width: 1.1em;
+}
+.contenedora{
+    width: 40%;
+    height: 500px;
+    background-color: gray;
+    border: 1px dashed navy;
+
+    & .box-absoluto{
+        width: 100px;
+        height:100px;
+        position: absolute;
+        background-color: indigo;
+        top: 100%;
+        right: 900px;
+        left: 200px;
+        /*o enves de usar el top,l,r y bottom mejor usamos todo en 1 que es 
+        inset: 100% 900px -100px 200px
+        */
+    }
+}
+
+.box{
+    inline-size: 300px;
+    block-size: 200px;
+    color: #fff;
+    background-image: linear-gradient(to top, transparent,rgb(72, 187, 72) ),
+        linear-gradient(to top,rgb(207, 95, 95),transparent)
+    ;
+    margin-block-end: 20px;
+    text-align: center;
+    font-size: large;
+}
+
+.item-1{
+    padding-block-end: 30px;
+    padding-inline-end: 30px;
+}
+.item-2{
+    margin-inline-start: 34px;
+    padding-block-start: 23px;
+}
+.item-3{
+    border-block-style: double;
+    border-inline:dashed;
+    border-width: 5px;
+    border-block-start-color: indigo;
+    border-inline-end-color:red;
+}
