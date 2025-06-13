@@ -1,0 +1,61 @@
+.box{
+    width: 200px;
+    height:200px;
+    background-color: navy;
+    margin-bottom: 10px;
+    border-style: solid;
+    border-color: rgb(124, 36, 36);
+    border-width: 5px;
+
+
+    &.item-1{
+        /*parametro de uno 
+            todos inset
+        */
+        border-radius: 14px;
+    }
+    &.item-2{
+        /*parametro de 2s
+            top-left y bottom-right
+            bottom-left y top-right
+        */
+        border-radius: 10px 50px;
+    }
+    &.item-3{
+        /*parametro de 3s
+            top-left
+            top-right y bottom-left
+            bottom-right
+        */
+        border-radius: 10px 50px 50%;
+    }
+    &.item-4{
+        /*parametro de 4
+            top-
+
+        */
+        border-radius: 5px 10px 20px 50% ;
+    }
+    &.item-5{
+        border-radius: 20px / 100px;
+    }
+    &.item-6{
+        border-top-right-radius: 50px 100px ;
+    }
+    &.item-7{
+        border-bottom-right-radius: 50px 100px ;
+    }
+    &.item-8{
+        border-radius: 20px 100px / 100px 20px ;
+    }
+    &.item-9{
+        border-radius: 50%;
+    }
+    &.item-10{
+        border-radius: 
+        10px 1.75rem 10% 1cm /
+        23% 40px 2em 3cm   
+        ;
+    }
+}
+

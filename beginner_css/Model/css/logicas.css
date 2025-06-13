@@ -70,3 +70,24 @@ html{
     border-block-start-color: indigo;
     border-inline-end-color:red;
 }
+.item-4{
+    border:5px solid black;
+    border-start-start-radius: 56px;
+    border-end-end-radius: 30px;
+    border-start-end-radius:5px;
+}
+.item-5{
+    float: inline-end;
+    display: grid;
+    place-items: center;
+    color: rgb(44, 101, 139);
+    &::after{
+        content: "5";
+        color: #fff;
+    }
+}
+.item-6{
+    inline-size: 100%;
+    max-inline-size:500px;
+    min-inline-size: 200px;
+}
