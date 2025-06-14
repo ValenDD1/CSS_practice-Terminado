@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <header>
+        <h1>
+            Calculos en CSS
+        </h1>
+        <p>
+            En CSS muchas veces necesitamos utilizar un mismo valor en varios lugares diferentes de nuestro código. Si lo hacemos indicando el valor en cuestión en cada uno de esos lugares, si en algún momento necesitamos cambiarlo, tendremos que cambiarlo en todos los lugares donde aparece, cuidando que no se nos olvide alguno o modifiquemos de forma errónea (algo bastante habitual). Por esta razón, con el tiempo, se han ido añadiendo mejoras, como las custom properties, un mecanismo similar a unas variables CSS.
+        </p>
+    </header>
+    <main>
+        <div>
+            <b>Ejemplo de calc() en css</b>
+            <br>
+            <div class="pedro" >
+                <div class="box" id="box"></div>
+            </div>
+            <br>
+            <div class="inputs" >
+                <label for="width">ancho</label>
+                <input type="number" id="width" placeholder="200px"min="1" max="999" >
+                <br>
+                <label for="height">alto</label>
+                <input type="number" id="height" placeholder="160px" min="1" max="999" >
+                <br>
+                <label for="calc">Calculo</label>
+                <select name="" id="calc">
+                    <option value="" selected disabled>seleccionar</option>
+                    <option value="+">suma</option>
+                    <option value="-">resta</option>
+                </select>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <p>Contenido que saque la informacion</p>
+        <a href="https://lenguajecss.com/css/funciones-css/que-son/">ManzDev</a>
+    </footer>
+    <script>
+        const select=document.getElementById("calc");
+        const bloque=document.getElementById("box");
+        const alto=document.getElementById("height");
+        const ancho=document.getElementById("width");
+
+        
+        function Calc(){
+            bloque.style.width=`calc( 200px ${select.value} ${ancho.value }px )`;
+            bloque.style.height=`calc( 160px ${select.value} ${alto.value }px )`;
+
+        }
+        select.addEventListener("change",Calc);
+        alto.addEventListener("input",Calc);
+        ancho.addEventListener("input",Calc);
+
+    </script>
+</body>
+</html>
