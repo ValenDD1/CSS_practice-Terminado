@@ -1,0 +1,70 @@
+
+
+@supports (display: flex){
+    header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: navy;
+        border: 1px solid black ;
+        margin:.25rem;
+    }
+}
+@supports not (display: conchetumare) {
+    main{
+        border: 2px solid navy;
+        color: rgb(75, 20, 20);
+        margin:.25rem;
+    }
+}
+
+@supports (not(display: grid)) or (display: inline-block){
+    .container{
+        padding: 10px;
+        margin: 20px;
+        width: 200px;
+        height: 200px;
+        color: #fff;
+        background-image: conic-gradient(from 1turn at 20% 50%,indigo,hotpink);
+        border-top-left-radius: 10% 20px;
+        border-bottom-right-radius: 23px 0.56rem;
+    }
+}
+
+@supports (not(selector(:inventado))) and selector(hgroup) {
+    h3{
+        color: green;
+    }
+}
+@supports selector(acronym) or selector(:inventado){
+    h3{
+        color: blueviolet;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        border: 1px solid goldenrod;
+        width: 10%;
+        margin-left: 10px;
+    }
+}
+
+@supports font-format(woff2){
+    marquee{
+        text-transform: uppercase;
+        border-radius: 5px;
+        border: 2px double thistle;
+    }
+}
+
+@supports font-tech(color-COLRv1) {
+    .font-tech{
+        color: violet;
+        background-color: blueviolet;
+        border: none;
+        padding: 30px;
+        border-radius: 50%;
+        width: 200px;
+        height: 20px;
+        text-align: center;
+    }
+}
+
