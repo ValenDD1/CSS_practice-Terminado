@@ -1,0 +1,76 @@
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    background-image: linear-gradient(to top,transparent,rgb(111, 171, 223));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header,
+main,
+footer{
+    border: 1px solid navy;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+header{
+    & h1{
+        font-family: 'Courier New', Courier, monospace;
+        color: aquamarine;
+    }
+    & p{
+        color: #321c55;
+        font-size: 20px;
+    }
+    
+}
+main{
+    & .box{
+        width: 200px;
+        height: 150px;
+        background-color: indigo;
+        border: 0.25rem solid hotpink;
+        margin: auto;
+    }
+    & b{
+        margin-top: 10px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: large;
+        font-weight: bolder;
+        
+    }
+    & .inputs{
+        border: 2px dashed green;
+        width: 200px;
+        margin: auto;
+        
+        & input{
+            border: none;
+            background-color: azure;
+            margin: 10px;
+        }
+        & label{
+            color: navy;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        & select{
+            border: none;
+            background-color: azure;
+        }
+    }
+
+    & .pedro{
+        overflow: auto;
+        margin: auto;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        width: 100%;
+        min-width: 200px;
+        max-width: 800px;
+        height: 200px;
+        
+    }
+}
