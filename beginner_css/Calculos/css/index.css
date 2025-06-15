@@ -67,8 +67,9 @@ main{
         display: grid;
         place-items: center;
         text-align: center;
-        width: 500px;
-        min-width: 300px;
+        width: 100%;
+        min-width: 200px;
+        max-width: 800px;
         height: 200px;
         
     }
