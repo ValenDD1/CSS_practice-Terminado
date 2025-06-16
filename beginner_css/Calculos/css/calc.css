@@ -1,0 +1,43 @@
+:root{
+    --width:300;
+    --height:200;
+}
+.box{
+    width: calc(var(--width) * 2px);
+    height: calc(var(--height) * 1px);
+    background-color: rgb( calc(var(--width) / 2 ) calc(var(--height)/ 2 ) 0);
+}
+
+@supports (width:abs(-200px)) or  (width: sign(-200px)) {
+    .abs{
+        width: var(--width);
+        height: abs(-200px);
+        background-color: rgb( sign(var(--width)) abs(var(--height)) 0);
+    }
+
+    .sign{
+        width: var(--width);
+        height: sign(-200px);
+        background-color: rgb( sign(var(--width)) sign(var(--height)) 0);
+    }
+
+}
+
+@supports (not(width:abs(-1px))) or (not (width: sign(-1px))) {
+    .abs::after{
+        content: "⚠ Tu navegador NO soporta abs()";
+        color: red;
+        display: block;
+        margin-top: 5px;
+        font-size: 0.8em;
+    }
+
+    .sign::after{
+        content: "⚠ Tu navegador NO soporta sign()";
+        color: red;
+        display: block;
+        margin-top: 5px;
+        font-size: 0.8em;
+    }
+}
+
