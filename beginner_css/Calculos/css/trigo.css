@@ -1,0 +1,17 @@
+.box{
+    width: calc(sin(60deg) * 100px );
+    height: calc(cos(60deg) * 100px);
+    background-color: red;
+    transform: translateY(calc(sin(60deg) * 100px));
+}
+
+.boxing{
+    width: sin(30deg);
+    width: cos(1turn);
+    width: acos(200grad);
+    width: cos(1.5rad);
+    width: calc(tan(1rad) * 100px);
+    height: 200px;
+    background-color: blueviolet;
+
+}
