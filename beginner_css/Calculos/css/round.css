@@ -28,7 +28,7 @@
     background-color: rgb(64, 71, 48);
 }
 .rem-1{
-    width: rem(341px, 20px);
+    width: rem(-450px,100px);
     height: rem(491px , -20px);
     background-color: red;
 }
