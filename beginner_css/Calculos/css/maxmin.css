@@ -1,0 +1,38 @@
+
+#container{
+    width: 800px;
+    height: 1000px;
+    background-color: gray;
+}
+.box{
+    width: 200px;
+    height: min(200px , 50%) ;
+    background-color: indigo;
+}
+
+.max{
+    width: max(500px,70%);
+    height: max(100px / 2 , 20%);
+    background-color: hotpink;
+}
+
+.maxmin{
+    width: max( 12vw , 20% , 120px * 2 );
+    height: min( 9.8rem , 10% ,500.4vh / 2 );
+    background-color: royalblue;
+}
+
+.clamp{
+    width: max(200px , min(50% ,400px));
+    height: clamp(200px , 50%,400px);
+    background-color: navy;
+}
+
+.boxing-responsive{
+    margin-top: 20px;
+    box-sizing: border-box;
+    width: clamp(200px,100%,800px);
+    border: 1px solid navy;
+    border-radius:10px;
+    height: 100px;
+}
