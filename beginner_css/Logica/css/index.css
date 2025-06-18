@@ -1,0 +1,79 @@
+body{
+    height:100vh;
+    display: grid;
+    gap: 8px;
+    grid-template-rows: auto 1fr auto;
+    background-image: url("../images/fondo-index.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+header{
+    border: 2px solid navy;
+    background: linear-gradient(transparent, rgb(111, 111, 214));
+    padding: 10px;
+    text-align: center;
+}
+header h1{
+    font-family: monospace;
+    font-weight: 400;
+}
+header p{
+    border:1px dashed rgb(47, 47, 150);
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    & span{
+        color:rgba(44, 53, 184, 0.849);
+
+        &:hover{
+            color: aqua;
+        }
+    }
+}
+
+header>ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    gap:10px;
+    justify-content: center;
+}
+li{
+    color: aquamarine;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+footer{
+    border:2px solid navy;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: linear-gradient(to top,transparent, rgb(111, 111, 214));
+}
+
+footer a{
+    text-decoration: none;
+    padding: 20px;
+}
+
+main{
+    border: 2px solid navy ;
+    background: linear-gradient(to left,transparent, rgb(111, 111, 214));
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: center;
+    padding: 30px;
+    gap: 10px;
+}
+
+img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    border:2px solid rebeccapurple;
+}
