@@ -1,0 +1,25 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px #000a;
+}
+
+header{
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px #000a;
+    text-align: center;
+    padding: 10px;
+
+}
+.box{
+    width: 50px;
+    height: 50px;
+    border:1px solid black;
+}

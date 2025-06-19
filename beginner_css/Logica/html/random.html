@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/random.css">
+</head>
+<body>
+    <header>
+        <h1>Random</h1>
+        <p>
+            en css existe la funcion random() pero por el momento no hay compatibilidad con todos los navegadores
+            ,asi que lo veremos con mas claridad en js
+        </p>
+    </header>
+    <main>
+        Ejemplo:
+        <div class="box"></div>
+        <br>
+        <button id="boton-wh" >Generar un numero aleatorio para el width y height </button>
+        <br>
+        <button id="boton-color">Generar un color aleatorio de un grupo</button>
+    </main>
+    <script>
+        const box=document.querySelector('.box');
+        const botonWH=document.getElementById('boton-wh');
+        const botonColor=document.getElementById('boton-color');
+
+        botonWH.addEventListener('click',function(){
+            box.style.width=`${Math.floor(Math.random()*500)}px`
+            box.style.height=`${Math.floor(Math.random()*500)}px`
+        })
+        botonColor.addEventListener('click',function(){
+            box.style.backgroundColor=`rgb(${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)})`
+        })
+    </script>
+</body>
+</html>
