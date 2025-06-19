@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/function.css">
+</head>
+<body>
+    <header>
+        <h1>Funciones</h1>
+        <p>
+            en css existen la propiedad @function pero por el momento no hay compatibilidad 
+            con todos los navegadores ,pero se veria de esta forma
+        </p>
+    </header>
+    <main>
+        <h3>Ejemplos</h3>
+        <section  id="ejemplos">
+            <div class="box">
+                <p>syntaxis de la funcion</p>
+                <code>
+@function --color(--value){ 
+    result: var(--value);
+}
+                </code>
+            </div>
+            <div class="box">
+                <p>syntaxis de la funcion con tipo de dato</p>
+                <code>
+@function --color(
+    --value type( &lt;color&gt;)){ 
+    result: "es color " + var(--value);
+}
+                </code>
+            </div>
+            <div class="box">
+                <p>syntaxis de la funcion con tipo de dato</p>
+                <code>
+@function --fuente-responsiva(){ 
+    result: 1rem ;
+    @media (width &gt;600px) {
+        result:1.5rem;
+    }
+}
+                </code>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>
