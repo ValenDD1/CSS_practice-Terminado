@@ -1,0 +1,85 @@
+body{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+header{
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: lightblue;
+    padding: 10px;
+    margin-bottom: 10px;
+
+    & h1{
+        font-family: 'Courier New', Courier, monospace;
+        color: darkblue;
+    }
+    & p{
+        color: darkgreen;
+        font-size: 20px;
+    }
+}
+main{
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: lightblue;
+    padding: 10px;
+    margin-bottom: 10px;
+
+    & .box{
+        width:clamp(100px, 200px, 300px);
+        padding: 10px;
+        color: white;
+        background-color: rgb(113, 113, 196);
+        margin: auto;
+        border-radius: 5px;
+
+        & p{
+            
+            font-size: 15px;
+        }
+    }
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: lightblue;
+    padding: 10px;
+
+    & a{
+        font-family: 'Courier New', Courier, monospace;
+        text-decoration: none;
+        color: darkblue;
+        font-size: 30px;
+    }
+    & p{
+        color: darkgreen;
+        font-size: 20px;
+    }
+}
+
+#inputs{
+    width: 50%;
+    padding: 10px;
+    border: 5px white dashed; 
+    margin: auto;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+
+    & input{
+        border: none;
+        background-color: azure;
+        margin: 10px;
+        outline: none;
+    }
+}
