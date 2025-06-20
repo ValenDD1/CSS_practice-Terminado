@@ -1,0 +1,11 @@
+h1{
+    color: attr(data-color type(<color>));
+    font-family: attr(data-font type(<font>)); 
+}
+
+h1::after{
+    content: attr(data-font);
+    width: 100px;
+    height: 100px;
+    background-color: attr(data-color);
+}
