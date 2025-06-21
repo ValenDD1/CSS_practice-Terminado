@@ -1,0 +1,55 @@
+.box{
+    text-decoration-line: line-through;
+    text-decoration-color: red;
+    text-decoration-thickness: calc(10px / 2);
+    text-decoration-style: dashed;
+    font-size: x-large;
+}
+.box:hover{
+    text-decoration-style: dotted;
+}
+
+.box2{
+    text-decoration: underline gold 2px double;
+    text-transform: capitalize;
+    text-underline-position: under;
+    border:2px solid gold;
+    text-underline-offset: 2px;
+    &:hover{
+        text-decoration: overline rgb(57, 134, 61) 3px solid;
+        text-transform: uppercase;
+        
+
+    }
+}
+.box3{
+    text-emphasis-color: blue;
+    margin: 10px;
+    font-weight: bold;
+    font-family: monospace;
+    font-size:1.4em;
+    text-emphasis-style: open circle;
+    text-emphasis-position: under left;
+    &:hover{
+        text-emphasis-color: red;text-emphasis-style:  circle;
+    }
+}
+.box4{
+    text-align: center;
+    border:1px solid navy;
+    padding: 20px;
+    border-radius: 20px;
+    font-size:1.3em;
+    text-emphasis-style: "🧿";
+    font-family: 'Courier New', Courier, monospace;
+    text-emphasis-position: under left;
+
+    &:hover{
+        width: 80%;
+        margin: auto;
+        color:red;
+        text-emphasis-position: over right;
+        text-emphasis-style: "👨‍💻";
+        font-family: monospace;
+    }
+}

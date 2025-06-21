@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <header>
+        <h1>Fuentes y Tipografia</h1>
+        <p>
+            aprenderemos a como usar fuentes en css y ver la forma y estructura de nuestra letra
+        </p>
+    </header>
+    <main>
+        Ejemplo
+        <div class="box">
+            <p id="parrafo">
+                soy un parrafo para este ejemplo ,puedes manipularme con los inputs
+                y ver como me transformo xdd.
+                tambien que estoy en un div y que sepas que te quiero.
+            </p>
+        </div>
+        <div id="inputs">
+            <input type="text" placeholder="font-size" id="font-size">
+            <input type="text" placeholder="font-weight" id="font-weight">
+            <input type="text" placeholder="font-style" id="font-style">
+            <input type="text" placeholder="text-transform" id="text-transform">
+            <input type="text" placeholder="font-family" id="font-family">
+
+        </div>
+    </main>
+    <footer>
+        <p>
+            @2025 valentino cuenca escobar
+        </p>
+        <a target="_blank" href="https://lenguajecss.com/css/fuentes-y-tipografias/elegir-tipografia/">
+            Fuentes</a>
+    </footer>
+
+    <script>
+        const font_size=document.getElementById("font-size");
+        const font_weight=document.getElementById("font-weight");
+        const font_style=document.getElementById("font-style");
+        const text_transform=document.getElementById("text-transform");
+        const font_family=document.getElementById("font-family");
+        const box=document.getElementById("parrafo");
+
+        font_size.addEventListener("input",()=>{box.style.fontSize=font_size.value + "px"  });
+        font_weight.addEventListener("input",()=>{box.style.fontWeight=font_weight.value});
+        font_style.addEventListener("input",()=>{box.style.fontStyle=font_style.value});
+        text_transform.addEventListener("input",()=>{box.style.textTransform=text_transform.value});
+        font_family.addEventListener("input",()=>{box.style.fontFamily=font_family.value});
+
+    </script>
+</body>
+</html>

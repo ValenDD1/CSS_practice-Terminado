@@ -1,0 +1,14 @@
+.box2{
+    width: clamp(300px,100%,500px);
+    height: 100px;
+    background-color: blue;
+    color: #fff;
+    overflow: auto;
+}
+
+.parrafo-2{
+    width: 200px;
+    padding: 10px;
+    background-color: hotpink;
+    color: black;
+}

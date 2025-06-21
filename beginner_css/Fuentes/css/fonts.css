@@ -1,0 +1,41 @@
+.box{
+    font-style: italic ;
+    font-size: x-large;
+    font-family: Arial;
+    font-weight: bolder;
+    line-height: 2.5;
+    border: 2px double;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.boxing{
+    font: normal italic 500 1.2rem/1.5 sans-serif;  
+    text-align: center;
+    border:1px solid red;
+    border-radius: 50px;
+    padding: 1.3rem;
+    margin: 10px;
+}
+
+.boxer{
+    font-family: monospace;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.3em;
+    line-height: 2;
+    text-align: justify;
+    padding: .75rem;
+    border:1px solid navy;
+    border-radius: 2% / 50px ;
+}
+
+.serif{
+    font-family: cursive;
+    font-size: .9em;
+    padding: 1.2rem;
+    margin:10px;
+    text-align: end;
+    border:1px solid chocolate;
+    border-radius: 10px;
+}

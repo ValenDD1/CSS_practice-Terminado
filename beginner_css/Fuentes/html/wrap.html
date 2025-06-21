@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/wrap.css">
+</head>
+<body>
+    <header>
+        <h1>Text-wrap </h1>
+        <p>
+            el  poder ajustar el texto dentro de un contenedor
+        </p>
+    </header>
+    <main id="parrafo-2">
+        Ejemplos
+        <br>
+        <input id="input-wrap" placeholder="nowrap" type="text">
+        <br>
+        <div class="box2" >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut incidunt temporibus quae qui dicta, minus perspiciatis? Ipsam, unde. Ea veritatis iste sapiente sequi dolor expedita autem corrupti quam sed consequuntur?
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates hic minima ratione. Velit quo similique eaque at dolores! Aliquam nihil illo dolore assumenda quos recusandae veniam voluptate nobis iste! Voluptas!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ipsum totam voluptate nostrum, libero, vel atque ratione soluta provident, dicta unde error sit necessitatibus quo? Aut eius ipsa inventore nam.
+            In autem labore cupiditate id nemo libero iusto quos. Qui iusto distinctio quis sunt accusantium labore praesentium, modi nemo dolor totam tempore ex perferendis repudiandae natus eveniet ad sapiente vero.
+            Voluptate quae sint explicabo! A laudantium neque nemo esse expedita dolorum architecto, facere sapiente in molestiae repudiandae impedit! Vitae fuga harum commodi dolor animi, aut autem magnam expedita eligendi. A.
+            Quam soluta necessitatibus corporis cumque ipsum quibusdam sequi veniam veritatis! Cupiditate tempore minima aperiam suscipit quis ad, incidunt voluptates assumenda labore quae corporis, fugit rem? Provident est ullam voluptatibus placeat.
+            Voluptatem totam dignissimos fugit corporis obcaecati cum architecto, neque quas soluta explicabo assumenda exercitationem culpa natus iure placeat, cupiditate quam illum quisquam. Iusto voluptate a consequuntur molestias repellendus maiores quia?
+        </div>
+        
+        <p class="parrafo-2" >
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus quis repudiandae deleniti placeat cumque architecto possimus dicta, ratione natus necessitatibus. Laborum quasi illo nihil. Autem quas pariatur deserunt libero assumenda.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit expedita veritatis aperiam vel, quas eaque explicabo sunt dolor, perferendis autem aspernatur repellendus, earum quod enim quidem accusantium. Suscipit, amet consectetur.
+        </p>
+
+        <p  class="parrafo-2" contenteditable >
+            ordenado para un header okis??
+        </p>
+        
+
+    </main>
+    <script>
+        const input=document.getElementById("input-wrap");
+        const bloque=document.getElementById("parrafo-2");
+
+        input.addEventListener("input",()=>{
+            
+            bloque.style.textWrap=`${input.value}`;
+            
+        })
+    </script>
+</body>
+</html>
