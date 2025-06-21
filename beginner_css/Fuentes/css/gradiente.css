@@ -1,0 +1,52 @@
+.box{
+    color:transparent;
+    padding: 10px;
+    font: normal normal bolder 30px monospace;
+    background-clip: text;
+    background-image: linear-gradient(to right, blue 10% 20% , hotpink 30% ) ;
+}
+
+.box2{
+    color:transparent;
+    padding: 10px;
+    text-align: center;
+    background-clip: text;
+    background-image: repeating-conic-gradient(
+        red 10deg 20deg,
+        blue 20deg 30deg,
+        green 30deg 40deg,
+        yellow 40deg 50deg
+
+    );
+    font: normal normal bolder 30px monospace;
+}
+
+/*webkit*/
+.box3{
+    padding: 10px;
+    font: italic normal bolder 23px sans-serif;
+    text-align: center;
+    background-clip: text;
+    background-image: repeating-radial-gradient(
+        circle at 20% 50%,
+        red 0% 10%,
+        orange 10% 20%,
+        yellow 20% 30%,
+        green 30% 40%,
+        blue 40% 50%,
+        indigo 50% 60%,
+        violet 60% 70%
+    );
+    -webkit-text-fill-color: transparent;
+}
+
+/*webkit*/
+.box4{
+    padding: 10px;
+    font: italic normal bolder 10rem sans-serif;
+    text-align: center;
+    background-clip: text;
+    background-position: 50%;
+    background-image: url(https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?cs=srgb&dl=pexels-souvenirpixels-417074.jpg&fm=jpg);
+    -webkit-text-fill-color: transparent;
+}
