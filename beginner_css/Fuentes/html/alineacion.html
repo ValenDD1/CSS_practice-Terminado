@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/alineacion.css">
+</head>
+<body>
+    <header>
+        <h1>
+            Texto y alineacion 
+        </h1>
+        <p>
+            veremos como alinear el texto con varias propiedades de css y algunos ejemplos
+        </p>
+    </header>
+    <main>
+        ejemplos
+        <section  >
+            <article>
+                <select name="" id="options">
+                    <option value="selecciona" disabled selected>Selecciona</option>
+                    <option value="pre-wrap">pre-wrap</option>
+                    <option value="nowrap">nowrap</option>
+                    <option value="pre">pre</option>
+                    <option value="pre-line">pre-line</option>
+                </select>
+                <div class="box" id="box">
+                    hola soy marcos 
+                    quieres conocer a mi familia ?         si o no?
+                </div>
+            </article>
+            <article>
+                <br>
+                <textarea name="" placeholder="escribe un mensaje" id="">
+                </textarea>
+            </article>
+            <article id="article" > 
+                <select name="" id="options-word-break">
+                    <option value="normal" selected>normal</option>
+                    <option value="keep-all">keep-all</option>
+                    <option value="break-all">break-all</option>
+                    <option value="break-word">break-word</option>
+                </select>
+                <div class="box">
+                    <p >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis cum placeat aperiam delectus, dolorem explicabo recusandae distinctio sequi temporibus dignissimos! Commodi minima, dolorum impedit voluptate itaque officia nihil adipisci suscipit.</p>
+                </div>
+                <div class="box">
+                    <p >sdbvvvvvvvvvvvvvvvvvvvvvvvvvvadvashbdhqageyjqehgqfwhgqwgdfghadfta</p>
+                </div>
+            </article>
+            <article>
+                <div class="box" >
+                    <p id="parrafo">
+                        Finish the words in javascript
+                        quiero saber si manñana es el dia de la familia completa
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ratione rem soluta tempore dolorum, veritatis quis numquam! Soluta dolorem, mollitia explicabo porro ullam vel fuga inventore quis ut molestiae? Exercitationem.
+                    </p>
+                    
+                </div>
+            </article>
+            <article>
+                <div class="box2">
+                    <p>
+                        Finish the words in javascript
+                        quiero saber si manñana es el dia de la familia completa
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ratione rem soluta tempore dolorum, veritatis quis numquam! Soluta dolorem, mollitia explicabo porro ullam vel fuga inventore quis ut molestiae? Exercitationem.
+                    </p>
+                    
+                </div>
+            </article>
+        </section>
+        <section>
+            Ejmeplos de Alineaje con text-align
+            <article>
+                <div class="aling-box">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci sit praesentium explicabo aspernatur. Amet sed recusandae officiis quisquam praesentium, dicta sequi reprehenderit magnam itaque veritatis nemo temporibus exercitationem est reiciendis?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequatur fugit unde error aliquid debitis veniam iusto distinctio? Eligendi optio odit dignissimos voluptatibus animi ut vel rem ullam blanditiis accusantium!
+                    Placeat sapiente recusandae aperiam ea vitae nemo modi ipsa ipsum dicta atque corporis, perferendis rem quisquam magni, iusto sit reprehenderit deleniti veniam minima consequatur, sunt dolore aut incidunt optio. Ipsam?
+                    Voluptatibus neque est quidem aperiam voluptate atque ducimus officiis modi necessitatibus ad laudantium magni ex facere consequuntur libero reiciendis, blanditiis voluptatem unde voluptatum iusto perferendis accusamus. Tempore in rerum laboriosam!
+                </div>
+            </article>
+            <article>
+                <select name="" id="verticals">
+                    <option value="top">top</option>
+                    <option value="center">center</option>
+                    <option value="bottom">bottom</option>
+                    <option value="baseline" selected>baseline</option>
+                    <option value="middle">middle</option>
+                    <option value="text-top">text-top</option>
+                    <option value="text-bottom">text-bottom</option>
+                    <option value="50%">50%</option>
+                    
+                </select>
+                <div class="align-box-2">
+                    <p>
+                        Hola mundo
+                        <span id="span" >que tal</span>
+                    </p>
+                </div>
+            </article>
+            <article>
+                Ejemplos con escpacio de texto
+                <div class="espacio">
+                    <p>
+                        Hola Mundo quieroq ue vean este texto loco
+                    </p>
+                </div>
+                <div  class="espacio indent">
+                    <p>
+                        hola mundo
+                        <span>Hola Mundo quieroq ue vean este texto loco</span>
+                    </p>
+                    <p>
+                        ola mundi csasds   
+                    </p>
+                    <p>
+                        hgadshgdjqhd hola
+                    </p>
+                </div>
+            </article>
+        </section>
+
+    </main>
+    <script>
+        const selection=document.getElementById("options");
+        const box=document.getElementById("box")
+        selection.addEventListener("change",()=>{
+            box.style.whiteSpace=`${selection.value}`;
+        })
+
+        const words=document.getElementById("options-word-break");
+        const article =document.getElementById("article");
+        words.addEventListener("change",()=>{
+            article.style.wordBreak=`${words.value}`;
+        })
+
+        const text=document.getElementById("span");
+        const vertical=document.getElementById("verticals");
+        vertical.addEventListener("change",()=>{
+            text.style.verticalAlign=`${vertical.value}`;
+            text.style.border="1px solid black";
+            text.style.backgroundColor="hotpink";
+            text.style.padding="2px";
+        })
+
+    </script>
+</body>
+</html>

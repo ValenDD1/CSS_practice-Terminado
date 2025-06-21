@@ -1,0 +1,73 @@
+.box{
+    width: 200px;
+    margin: .2em;
+    height: 200px;
+    background-color: indianred;
+    white-space: normal;
+    overflow: auto;
+}
+
+textarea{
+    resize: none;
+    tab-size: 4;
+}
+
+.box > #parrafo{
+    hyphens: auto;
+    text-align: justify;
+    padding: 10px;
+
+}
+
+.box2{
+    width: 200px;
+    margin: .2em;
+    height: 200px;
+    background-color: greenyellow;
+    border-radius: 20px ;
+    padding: 10px;
+    overflow-wrap: anywhere;
+    hyphens: auto;
+    text-align: justify;
+    
+}
+
+.aling-box{
+    margin: .2em;
+    background-color: greenyellow;
+    border-radius: 20px ;
+    padding: 10px;
+    text-align: center;
+    text-align-last: end;
+}
+
+.align-box-2{
+    margin: .2em;
+    background-color: greenyellow;
+    border-radius: 20px ;
+    padding: 10px;
+}
+
+.espacio{
+    padding: 10px;
+    border-radius: 20px;
+    border:2px solid hotpink;
+    background-color: black;
+    color: white;
+    word-spacing: 5px;
+    letter-spacing: 5px;
+}
+.indent{
+    word-spacing: normal;
+    letter-spacing: normal;
+
+    p:nth-child(1){
+        text-indent: 50px;
+    }
+    p:nth-child(2){
+        text-indent: 20px;
+    }
+    p:nth-child(3){
+        padding-inline-start: 50px;
+    }
+}
