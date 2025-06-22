@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'mercury';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src:
+        local('mercury'), 
+        url("../fonts/GravitasOne-Regular.ttf") format("truetype");
+    
+}
+
+@supports (font-variation-settings: normal){
+    @font-face {
+        font-family: 'mercury';
+        src:
+            local('mercury'), 
+            url("../fonts/GravitasOne-Regular.ttf") format("truetype");
+        font-weight: 100 900;
+        font-stretch: 50% 150%;
+        font-style: italic;
+        font-feature-settings: "case" 1;
+    }
+}
+
+.box{
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-radius: 20px 20px 20px 20px / 10px 30px 50px 1rem ;
+    border: 1px solid hotpink;
+    background-color: black;
+    
+    h3{
+        color:red;
+    }
+    
+}
+
+.font-mercury{
+    font-size: 1rem;
+    font-family: 'mercury',sans-serif;
+    color: #fff;
+    p{
+        color: #fff;
+    }
+
+}

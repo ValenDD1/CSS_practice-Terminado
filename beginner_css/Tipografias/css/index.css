@@ -71,7 +71,8 @@ main{
         background-color: black;
         color: #fff;
         border-radius: 5px;
-        width: 80%;
+        width:70%;
+        margin:auto;
         word-break: normal;
         overflow-wrap: break-word;
         padding: 10px;
