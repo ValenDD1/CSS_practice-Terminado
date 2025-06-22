@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-family: 'Comic Relief', cursive;
+    letter-spacing: 2px;
+}
+
+body{
+    min-height: 100vh;
+    border-radius: 5px;
+    display: grid;
+    border:1px solid black;
+    margin:.5rem;
+    grid-template-rows: auto 1fr auto;
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.5),rgb(119, 111, 223));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+header{
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 40px;
+    padding: .5rem 0;
+    margin: 10px;
+    background-color: transparent;
+    
+    h1{
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(to left,transparent,rgb(146, 3, 3));
+        background-clip: text;
+    }
+    p{
+        color: wheat;
+    }
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    padding: .5rem .5rem;
+    margin: 10px;
+    border-radius: 40px;
+    p{
+        color:rgb(5, 49, 5);
+        &:hover{
+            color: red;
+        }
+    }
+    a{
+        text-decoration: none;
+        color: rgb(25, 8, 41);
+    }
+}
+
+main{
+    border: 1px solid black;
+    padding: .5rem .75rem;
+    margin: 10px;
+    border-radius: 40px;
+    & p:nth-child(1){
+        text-align: center;
+        margin-top: 40px;
+
+    }
+    & pre{
+        background-color: black;
+        color: #fff;
+        border-radius: 5px;
+        width: 80%;
+        word-break: normal;
+        overflow-wrap: break-word;
+        padding: 10px;
+    }
+}
+
+
+
+
+
+
+
