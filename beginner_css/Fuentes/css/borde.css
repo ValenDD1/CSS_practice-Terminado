@@ -1,0 +1,25 @@
+#ejemplo1{
+    -webkit-text-stroke: 1px red;
+    color: black;
+    padding: 10px;
+    font-size: 2em;
+    text-wrap: balance;
+}
+
+#ejemplo2{
+    -webkit-text-stroke: 0.5px hotpink;
+    color:aliceblue;
+    font-size: xx-large;
+    padding: 10px;
+    text-wrap: pretty;
+}
+
+#ejemplo3{
+    -webkit-text-stroke: 1px red;
+    color: blue;
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: monospace;
+    padding: 10px;
+    text-wrap: balance;
+}
