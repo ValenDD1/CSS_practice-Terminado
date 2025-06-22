@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap");
+
+.p{
+    
+    border-radius: 20px;
+    background-color: rgb(231, 223, 223);
+    padding: 20px;
+    margin: 20px;
+    color: blue;
+    
+}
+
+.p-2{
+    font-size-adjust: 1.5;
+}
+.p-3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-synthesis: none;
+}
+
+.english{
+    font-synthesis: none;
+    font-family: "Montserrat", sans-serif;
+}
