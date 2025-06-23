@@ -51,6 +51,8 @@ footer{
 main{
     padding: 10px 50px;
     border:1px solid red;
+    display: grid;
+    place-items: center;
     
     & div{
         background-color: aliceblue;
