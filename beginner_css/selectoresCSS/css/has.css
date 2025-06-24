@@ -1,0 +1,21 @@
+header div:has(h1){
+    background: red;
+}
+header{
+    background-color: blue;
+    border-radius: 10px;
+    border:1px solid black;
+}
+
+.lista > ul:has(>.numero1:first-child){
+    color: red;
+}
+
+
+.inputs:has(#bton:checked) {
+    background-color: red;
+}
+
+.inputs select:has(option[value="1"][disabled]){
+    background-color: yellowgreen;
+}

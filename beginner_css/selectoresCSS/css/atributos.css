@@ -1,0 +1,57 @@
+
+
+
+p[aria-disabled*="true"]{
+    color: red;
+}
+
+a[href$=".com"] {
+    color: greenyellow;
+    -webkit-text-stroke: 1px black;
+    font-size: xx-large;
+    text-decoration: none;
+    cursor: all-scroll;
+}
+
+[title~="niño" i]{
+    width: 50%;
+    white-space: normal;
+    overflow-wrap: break-word;
+    color: #fff;
+    background-color: black;
+    border-radius: 5px;
+    border: 2px solid hotpink;
+}
+
+select{
+    & option[value^="1"]{
+        color: green;
+        font-size: xx-large;
+    }
+    & option[value$="1"]{
+        color: red;
+        font-size: 3.2rem;
+    }
+}
+
+p[id|="pedro"]{
+    color: blueviolet;
+    border: 1px solid red;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+ol[class="a"] {
+    list-style-type: lower-alpha;
+    background: red;
+}
+
+ol[class="a" s] {
+    list-style-type: lower-alpha;
+    background: lime;
+}
+
+ol[class="A" s] {
+    list-style-type: upper-alpha;
+    background: lime;
+}

@@ -1,0 +1,41 @@
+:is(body) :is(header,main){
+    border:1px solid black ; margin:10px;
+}
+.parrafo__ejemplo{
+    width: 30%;
+    text-align: center;
+    margin: 5px auto;
+    border-radius: 20px;
+}
+.parrafo__ejemplo:not(.uno, .tres, .cinco){
+    border:1px solid blue;
+    color: red;
+    box-shadow: 1px 0px 0px 1px black;
+    background-color: aqua;
+}
+.parrafo__ejemplo:not( :where(.dos,.cuatro) ){
+    color: rgb(40, 44, 49);
+    border:1px solid rgb(108, 156, 116);
+    box-shadow: 1px 0px 0px 1px rgb(151, 30, 30);
+    background-color: rgb(102, 93, 219);
+}
+
+
+h1:not(p+h1, header h1){
+    color: navy;
+    font-family: monospace;
+}
+
+.inputs input:not([placeholder="perro"])::placeholder{
+    color: red;
+}
+.inputs label:not([for^="n"]){
+    color: blue;
+}
+.inputs input:not([placeholder|="perro"]) {
+    background-color: yellowgreen;
+}
+
+input[name|="diarrea"]{
+    color: blue;
+}
