@@ -1,0 +1,68 @@
+.box > p{
+    color: blue;
+}
+
+.box span{
+    color: red;
+}
+
+.sit{
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+
+.sit + .box  {
+    background-color: aqua;
+}
+
+.box + .sit {
+    background-color: rgb(22, 129, 129);
+    border-radius: 50%;
+    text-align: center;
+    width: 30%;
+}
+
+.pedro *{
+    border: 1px solid hotpink;
+}
+
+.oscar > *{
+    border: 1px solid hotpink;
+}
+
+h1 ~ p{
+    color: hotpink;
+    -webkit-text-stroke: 1px red;
+    font-size: 2rem;
+}
+
+/*mal ❌*/
+.servix  section,article{
+    color: rgb(93, 194, 115);
+    border: 1px solid rgb(252, 84, 17);
+}
+.servix > section,article{
+    color: navy;
+    font-size: 1rem;
+    font-weight: bolder;
+    border: 1px solid blue;
+}
+/*bien ✅*/
+.duc > p {
+    border: 1px solid hotpink;
+    padding: 2px;
+}
+.duc > img {
+    border: 1px solid hotpink;
+    padding: 2px;
+}
+
+
+/*funciona pero pasa el error que los demas ❌*/
+.duncan + p[class="parrafo"],img[class="imagen"] {
+    color: brown;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+}
