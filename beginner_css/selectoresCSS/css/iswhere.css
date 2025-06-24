@@ -1,0 +1,84 @@
+body > main, main > div.Ejemplos {
+    
+    border:1px solid black;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.container :is( .ruta,.list,.menu ){
+    color: red;
+    background-color: navy;
+    font-size: 12px;
+}
+
+
+/*is tiene mas nivel que where() 📢*/
+:is(.container1,.container2,.container3) .list{
+    color: blue;
+    font-size: 23px;
+
+}
+
+/*ejemplo que is es mas poderoso que where 👥 */
+:where(.container4) .list{
+    color: rgb(77, 138, 87);
+    font-size: 11px;
+
+}
+
+:is(.container4) .list{
+    color: rgb(99, 38, 64);
+    font-size: xx-large;
+
+}
+
+
+:where(.header,.footer) p {
+    font-size: 34px;
+    border-radius: 20px;
+    border:2px solid red;
+}
+
+:is(.main,.article) :where(h1,h2){
+    border-radius: 20px;
+    border:2px solid red;
+    text-align: center;
+}
+
+
+p{
+    color: navy;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*cascada en css*/
+.azul{
+    color:blue;
+}
+
+.amarillo{
+    color:yellow;
+}
+.rojo{
+    color: red;
+}
+.verde{
+    color:green;
+}
+
+
+
