@@ -1,2 +1,2 @@
 # CSS_practice
-retroalimentacion del lenguaje de programacion 'css'(cascading styles sheets)
+retroalimentacion del lenguaje de estilos 'css'(cascading styles sheets)
