@@ -1,0 +1,27 @@
+:modal::backdrop{
+    background-color: rgba(0, 0, 0, 0.5);
+    
+}
+:modal{
+    background-color: rgb(212, 65, 65);
+    border:none;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+#fullscreen{
+    display: none;
+}
+
+#fullscreen:fullscreen{
+    display: block;
+    background: linear-gradient(120deg, black, indigo);
+    border: 3px solid red;
+    color: white;
+    padding: 1rem;
+}

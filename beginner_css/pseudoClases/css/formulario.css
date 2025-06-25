@@ -1,0 +1,71 @@
+
+input:checked + p{
+    color: green;
+}
+
+input:indeterminate + p {
+    color: orange;   
+}
+
+input:read-only{
+    color: red;
+    background-color: gray;
+    border: none;
+    border-radius: 10px;
+}
+
+input:disabled{
+    color: white;
+    padding: 10px;
+    background-color: black;
+    border: none;
+    border-radius: 10px;
+}
+
+input:focus{
+    outline: none;
+}
+
+input:read-write{
+    color: blue;
+    background-color: lightgray;
+    border: 2px solid darkgray;
+    border-radius: 5px;
+}
+
+
+input[type="text"]:placeholder-shown {
+    color: purple;
+    font-size: 45px;
+    font-style: italic;
+}
+
+:default{
+    color: blue;
+    font-weight: bold;
+}
+
+
+input[placeholder*="nombre"]:valid {
+    color: green;
+    font-size: 20px;
+}
+input[placeholder*="nombre"]:invalid {
+    color: red;
+    font-size: 20px;
+}
+input[placeholder="apellido"]:required {
+    border:5px solid orangered !important;
+}
+
+input:optional {
+    border:5px solid green !important;
+}
+
+input[type="number"]:out-of-range {
+    border:5px solid rgb(221, 19, 19) !important;
+}
+
+input[type="number"]:in-range {
+    border:5px solid green !important;
+}

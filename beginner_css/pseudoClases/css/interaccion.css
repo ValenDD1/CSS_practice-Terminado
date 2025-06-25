@@ -1,0 +1,56 @@
+button:hover{
+    padding: 5px;
+    color: #fff;
+    background-color: aquamarine;
+    border-radius: 20px;
+    border: none;
+    
+}
+button{
+    border: none;
+}
+
+.perro:hover{
+    background-color: aqua;
+    padding: 10px;
+    border: 1px solid navy;
+    border-radius: 10px;
+    color: #fff;
+    width: 30%;
+    text-align: center;
+}
+.Ejemplos:hover{
+    background-color: red;
+    color: #000;
+}
+
+nav ul:hover{
+    visibility: hidden;
+}
+
+nav + button:active{
+    color:yellowgreen;
+    box-shadow: 1px 10px 10px black;
+}
+
+nav:active{
+    font-family: monospace;
+}
+.sandia input[type="button"]:focus{
+    color: #fff;
+}
+.sandia input[type="text"]:focus{
+    color: #fff;
+    border: none;
+    background-color: #000;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.sandia input[type="email"]:focus-visible{
+    color: #fff;
+    border: none;
+    background-color: #000;
+    border-radius: 10px;
+    padding: 10px;
+}

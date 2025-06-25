@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/formulario.css">
+</head>
+<body>
+    <header>
+        <h1>Formulario con pseudo-clases</h1>
+        <p>Ejemplo de formulario utilizando pseudo-clases CSS</p>
+    </header>
+    <main>
+        Ejemplos
+        <form action="index.php">
+            <fieldset>
+                <legend>Formulario</legend>
+                <label for="check">Boton de entrada</label>
+                <input type="checkbox"id="check">
+                <p>estoy checkeado</p>
+                <label for="text">Radio indeterminado</label>
+                <input type="radio" name="radio1" id="radio3">
+                <input type="radio" name="radio2" id="radio1">
+                <input type="radio" name="radio3" id="radio2">
+                <p>Estoy en foco por el indeterminado</p>
+
+                <label for="">readonly</label>
+                <input readonly value="No puedes editarme xd">
+                <input  disabled  placeholder="estoy deshabilitado">
+                <input type="text" placeholder="estoy vacio">
+                <input type="email" placeholder="estoy vacio">
+
+                <p>
+                    ultimas pseudoclases
+                </p>
+                <input type="text" name="" placeholder="nombre" pattern="[A-Za-z]{3,10}">
+
+                <input type="text" name="" placeholder="apellido" pattern="[A-Za-z]{3,10}" required>
+
+                <input type="number" max="10" min="1" placeholder="numero del 1 al 10" required>
+
+                <input type="range" name="" id="" max="100" min="0" value="50">
+            </fieldset>
+        </form>
+    </main>
+    <script>
+        const inputs=document.querySelectorAll('label + input');
+        inputs[1].indeterminate = true;
+    </script> 
+</body>
+</html>

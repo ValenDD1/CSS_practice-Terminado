@@ -1,0 +1,119 @@
+.box p:first-child{
+    color: red;
+}
+.box p:last-child{
+    color: rebeccapurple;
+}
+
+.box2 :first-child{
+    color: blue;
+    border: 1px solid blue;
+}
+
+
+
+.container,.container :first-child{
+    border: 1px solid red;
+    padding: 10px;
+    
+}
+.container :first-child{color: aqua;}
+
+p :first-child{
+    color: red;
+}
+
+.conjunto,.conjunto2,.conjunto3,.conjunto4 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+:is(.conjunto,.conjunto2,.conjunto3,.conjunto4)  > :is(section, article,div,aside) {
+    background-color: #fff;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    height: 50px;
+    border-radius: 5px;
+    margin: 2px;
+    border: 1px solid black;
+}
+
+/*se puede crear muchas variaciones con nth-child */
+.conjunto :nth-child(5n+1) {
+    background-color: red;
+}
+.conjunto :nth-child(5n+2) {
+    background-color: blue;
+}
+.conjunto :nth-child(5n+3) {
+    background-color: green;
+}
+.conjunto :nth-child(5n+4) {
+    background-color: yellow;
+}
+.conjunto :nth-child(5n+5) {
+    background-color: orange;
+}
+
+.conjunto2 :nth-last-child(3n-1){
+    background-color: blueviolet;
+}
+.conjunto2 aside:nth-last-child(5n){
+    background-color: green;
+}
+
+
+.conjunto3 :nth-child(2n+1 of aside):hover{
+    background-color: pink;
+
+}
+.conjunto3 :nth-last-child( n of section ):active{
+    background-color: lightblue;
+}
+
+.conjunto4 div:first-of-type{
+    background-color: lightgreen;
+}
+.conjunto4 :last-of-type{
+    background-color: lightcoral;
+}
+
+.conjunto4 section:nth-of-type(2n){
+    border:1px solid red;
+    color: rgb(73, 28, 21);
+}
+
+.conjunto4 article:not(:nth-of-type(3)) {
+    background-color: rgb(40, 243, 165);
+}
+
+.conjunto4 div:nth-last-of-type(2) {
+    background-color: rgb(75, 39, 206);
+}
+
+.conjunto4  section:has(div) ,
+.conjunto4  section:nth-of-type(2n+1) {
+    background-color: rgb(255, 0, 0);
+}
+
+#dni article:only-of-type{
+    background-color: rgb(255, 0, 0);
+}
+
+.vacio,.vacio_falso,.vacio_coment{
+    background-color: gray;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+:is(.vacio,.vacio_falso,.vacio_coment):empty {
+    border: 1px solid red;
+    border-radius: 50%;
+}
+
+
