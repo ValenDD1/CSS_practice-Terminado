@@ -1,0 +1,23 @@
+
+html:lang(es){
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+html:lang(en){
+    background-color: yellowgreen;
+}
+
+p:lang(es){
+    color: red;
+}
+p{
+    text-align: right;
+}
+
+p:dir(rtl){
+    
+    border: 1px solid black;
+}
