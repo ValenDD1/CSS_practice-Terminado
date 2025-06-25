@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/estado.css">
+</head>
+<body>
+    <header>
+        <h1>
+            Estados de los elementos HTML
+        </h1>
+    </header>
+    <main>
+        Ejemplos
+        <div id="modal" class="modal" popover="manual" >
+            <p>aqui hay contenido papu</p>
+            <button class="close" popovertargetaction="hidden" popovertarget="modal" >Cerrar</button>
+        </div>
+        <button class="open" popovertarget="modal" >Abrir modal</button>
+        <button id="open" > Abrir Modal</button>
+
+        <dialog id="container">
+            Hola soy el modal con script
+            <button id="close"  >Cerrar</button>
+        </dialog>
+        <br>
+        <button id="open2"> Abrir Modal con script</button>
+        <dialog id="container2">
+            Hola soy el modal con script
+            <button id="close2"  >Cerrar</button>
+        </dialog>
+        <br>
+        <div id="fullscreen" open>
+            soy full screen
+            <button>Close</button>
+        </div>
+        <button>Abrir fullscreen</button>
+
+
+        <div id="fullscreen2" open>
+            soy full screen
+            <button>Close</button>
+        </div>
+        <button id="full2" >Abrir fullscreen</button>
+
+    </main>
+
+    <script>
+        const box=document.getElementById("container");
+        const open=document.querySelector("#open");
+        const open2=document.querySelector("#open2");
+        const close=document.querySelector("#close");
+        const close2=document.querySelector("#close2");
+
+        open2.addEventListener("click",()=>{
+            box.showModal();
+        });
+        close2.addEventListener("click",()=>{
+            box.close();
+        });
+        open.addEventListener("click",()=>{
+            box.showModal();
+        });
+        close.addEventListener("click",()=>{
+            box.close();
+        });
+
+        const full=document.querySelector("#fullscreen , #fullscreen2");
+        const fullButtonOpen=document.querySelector("#fullscreen + button");
+        const fullButtonClose=full.querySelector("#fullscreen button , #fullscreen2 button");
+        const full2=document.getElementById("full2");
+
+        full2.addEventListener("click",()=>{
+            full.requestFullscreen();
+        });
+        fullButtonOpen.addEventListener("click",()=>{
+            
+            full.requestFullscreen();
+        });
+        fullButtonClose.addEventListener("click",()=>{
+            document.exitFullscreen();
+        });
+    </script>
+</body>
+</html>
