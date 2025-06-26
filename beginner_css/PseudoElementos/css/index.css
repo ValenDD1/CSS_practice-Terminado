@@ -1,0 +1,179 @@
+/* ===== PSEUDOELEMENTOS CSS ===== */
+
+/* ::before - Inserta contenido ANTES del elemento */
+.caja-decorada::before {
+    content: "🎨 ";
+    color: #ff6b6b;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* ::after - Inserta contenido DESPUÉS del elemento */
+.caja-decorada::after {
+    content: " ✨";
+    color: #4ecdc4;
+    font-size: 1.2em;
+}
+
+/* Estilo base para la caja */
+.caja-decorada {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border-left: 4px solid #007bff;
+}
+
+/* ::first-letter - Estiliza la primera letra */
+.primera-letra::first-letter {
+    font-size: 3em;
+    font-weight: bold;
+    color: #e74c3c;
+    float: left;
+    line-height: 1;
+    margin-right: 8px;
+    margin-top: 4px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* ::first-line - Estiliza la primera línea */
+.primera-linea::first-line {
+    font-weight: bold;
+    color: #2980b9;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ::selection - Personaliza la selección de texto */
+.seleccion-personalizada::selection {
+    background-color: #ff6b6b;
+    color: white;
+    text-shadow: none;
+}
+
+/* Para navegadores Firefox */
+.seleccion-personalizada::-moz-selection {
+    background-color: #ff6b6b;
+    color: white;
+    text-shadow: none;
+}
+
+/* ::placeholder - Estiliza el placeholder de inputs */
+.input-placeholder::placeholder {
+    color: #9b59b6;
+    font-style: italic;
+    opacity: 0.8;
+    font-size: 14px;
+}
+
+/* Estilo base para el input */
+.input-placeholder {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 300px;
+}
+
+.input-placeholder:focus {
+    outline: none;
+    border-color: #9b59b6;
+}
+
+/* ::marker - Personaliza los marcadores de listas */
+.lista-personalizada li::marker {
+    content: "➤ ";
+    color: #e67e22;
+    font-size: 1.2em;
+}
+
+/* Estilo base para la lista */
+.lista-personalizada {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.lista-personalizada li {
+    margin: 10px 0;
+    padding: 8px;
+    background: #ecf0f1;
+    border-radius: 4px;
+    position: relative;
+}
+
+/* ::backdrop - Estiliza el fondo cuando un elemento está en fullscreen */
+.modal::backdrop {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+/* Estilo base para el modal */
+.modal {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.contenedor-backdrop {
+    margin: 20px 0;
+}
+
+.contenedor-backdrop button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contenedor-backdrop button:hover {
+    background: #2980b9;
+}
+
+/* ===== PSEUDOELEMENTOS ADICIONALES ===== */
+
+/* ::file-selector-button - Botón de selección de archivos */
+input[type="file"]::file-selector-button {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* ::spelling-error y ::grammar-error - Errores de ortografía y gramática */
+::spelling-error {
+    text-decoration: underline wavy red;
+}
+
+::grammar-error {
+    text-decoration: underline wavy green;
+}
+
+/* Estilos generales del body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #ffffff;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+}
