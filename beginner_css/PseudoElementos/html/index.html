@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoelementos CSS</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <h1>Ejemplos de Pseudoelementos</h1>
+    
+    <!-- ::before y ::after -->
+    <div class="caja-decorada">
+        <p>Este párrafo tiene decoraciones antes y después</p>
+    </div>
+    
+    <!-- ::first-letter -->
+    <p class="primera-letra">
+        Este párrafo tiene la primera letra estilizada como una letra capital.
+    </p>
+    
+    <!-- ::first-line -->
+    <p class="primera-linea">
+        Este párrafo tiene la primera línea con un estilo diferente. 
+        El resto del texto mantiene el estilo normal. 
+        Solo la primera línea se ve afectada por el pseudoelemento.
+    </p>
+    
+    <!-- ::selection -->
+    <p class="seleccion-personalizada">
+        Selecciona este texto para ver el efecto personalizado de selección.
+    </p>
+    
+    <!-- ::placeholder -->
+    <input type="text" class="input-placeholder" placeholder="Placeholder personalizado">
+    
+    <!-- Lista con ::marker -->
+    <ul class="lista-personalizada">
+        <li>Primer elemento</li>
+        <li>Segundo elemento</li>
+        <li>Tercer elemento</li>
+    </ul>
+    
+    <!-- ::backdrop (para elementos en fullscreen) -->
+    <div class="contenedor-backdrop">
+        <button onclick="document.querySelector('.modal').requestFullscreen()">
+            Abrir en pantalla completa
+        </button>
+        <div class="modal">Contenido modal</div>
+    </div>
+</body>
+</html>

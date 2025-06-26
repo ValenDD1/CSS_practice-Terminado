@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+#backdrop1::backdrop{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+#backdrop1{
+    width: 50%;
+    text-align: center;
+    border: none;
+    button{
+        padding: 10px;
+        border: none;
+        background-color: #007BFF;
+        color: white;
+    }
+}
+
+[type="file"]::file-selector-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+[type="file"]::file-selector-button:hover {
+    background-color: #0056b3;
+}
+
+.lista > li::marker {
+    content: "🛑";
+    color: red;
+    font-size: .5rem;
+}
+
+.placeholder-input::placeholder {
+    color: #888;
+    font-style: italic;
+    font-size: 1rem;
+}
+
+.first-letter::first-letter{
+    font-size: 2rem;
+    color: #007BFF;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid #007BFF;
+    padding: .75rem;
+}
+
+.first-line::first-line {
+    font-weight: bold;
+    
+    color: #adb633;
+    font-size: 1.2rem;
+}
+
+::selection{
+    background-color: #ffc107;
+    color: black;
+}
+
+h2::selection {
+    background-color: #da4b4b;
+    color: black;
+}
+.spelling-error{
+    padding: 1rem;
+    border: 1px solid red;
+}
+
+.spelling-error::spelling-error {
+    background-color: #ffcccc;
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.spelling-error::grammar-error {
+    background-color: #ffcccc;
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+::target-text {
+    background-color: #d1e7dd;
+    color: #0f5132;
+    font-weight: bold;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+
+article {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+.before-after::before {
+    content: "⏪";
+    font-weight: bold;
+}
+.before-after::after {
+    content: "⏩";
+    font-weight: bold;
+}
+.before-after {
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    margin: 1rem 0;
+    text-align: center;
+}

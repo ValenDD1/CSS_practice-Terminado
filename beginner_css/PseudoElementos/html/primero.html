@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/primero.css">
+</head>
+<body>
+    <header>
+        <h1>
+            Pseudo Elementos
+            Iniciales
+        </h1>
+        <p>
+            veremos el backdrop marker y file
+        </p>
+    </header>
+    <main>
+        Ejemplos:
+
+        <div class="contenedor" >
+            <h2>Backdrop</h2>
+            <div id="backdrop1" popover="manual" >
+                <p>
+                    Este es un ejemplo de un elemento con un pseudo elemento backdrop.
+                    El pseudo elemento backdrop se utiliza para crear un fondo detrás de un elemento.
+                </p>
+                <button class="close" popovertargetaction="hidden" popovertarget="backdrop1" >Cerrar</button>
+            </div>
+            <button class="open" popovertarget="backdrop1" >Abrir modal</button>
+
+            <h2>File</h2>
+            <br>
+            <input type="file" id="fileInput" class="file-input">
+            <label for="fileInput" class="file-label">
+                <span class="file-icon">📁</span>
+                Seleccionar archivo
+            </label>
+            <br>
+            <h2>Marker</h2>
+            <ul class="lista">
+                marker diferente
+                <li>elemento1</li>
+                <li>elemento2</li>
+                <li>elemento3</li>
+                <li>elemento4</li>
+                <li>
+                    elemento5
+                    <ul>
+                        <li>subelemento1</li>
+                        <li>subelemento2</li>
+                        <li>subelemento3</li>
+                    </ul>
+                </li>
+
+            </ul>
+            <br>
+            <h2>placeholder</h2>
+            <input type="text" placeholder="Escribe algo aquí..." class="placeholder-input">
+        </div>
+        <div class="Mas Ejemplos" >
+            <h2>
+                Ahora veamos los pseudo elementos más comunes
+                que son 
+            </h2>
+            <section>
+                <h2>first-letter</h2>
+                <p class="first-letter"> 
+                    quiero decirte algo pero....
+                </p>
+            </section>
+            <section>
+                <h2>first-line</h2>
+                <p class="first-line"> 
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia placeat excepturi, tenetur eligendi iure ad quam esse. Ad eaque quisquam fuga, doloribus cupiditate, pariatur eligendi dolorum, voluptatibus facilis tempore sequi.
+                </p>
+            </section>
+            <h2>
+                Spelling-error and Grammar-error
+            </h2>
+            <p class="spelling-error" spellcheck="true" contenteditable="true" >
+                Este es un ejemplo de un texto con un herror de ortografía.
+                Este es un ejemplo de un texto con un error gramática.
+                Los perros corre por el parque
+            </p>
+            <h2>
+                target-text
+            </h2>
+            <article>
+                <h1>El Quijote de la Mancha</h1>
+                <p>En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que vivía un hidalgo de los de lanza en astillero, adarga antigua, rocín flaco y galgo corredor.</p>
+                <p>Una olla de algo más vaca que carnero, salpicón las más noches, duelos y quebrantos los sábados, lantejas los viernes, algún palomino de añadidura los domingos, consumían las tres partes de su hacienda.</p>
+            </article>
+            <h2>
+                ::before y ::after
+            </h2>
+            <p class="before-after">
+                EJEMplo de before y after
+                <span class="before">Antes: </span>
+                <span class="after">Después</span>
+            </p>
+            
+        </div>
+
+    </main>
+</body>
+</html>
