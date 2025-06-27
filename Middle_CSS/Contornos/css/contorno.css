@@ -1,0 +1,48 @@
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: red 5px solid;
+    outline:1px solid black;
+    outline-offset: 1px;
+
+    &:hover{
+        outline:none;
+    }
+}
+
+input{
+    margin:.4rem;
+    background: yellowgreen;
+    border-radius: 20px;
+    padding: 5px;
+    border: none;
+    color:white;
+    font-family: monospace;
+    font-weight: bolder;
+    font-size: 1.1rem;
+    transition: all 1s;
+
+    &:focus{
+        outline: 2px solid yellow;
+    }
+}
+
+button{
+    background-color: rebeccapurple;
+    border: none;
+    color:white;
+    padding: 10px;
+    border-radius: 50%;
+
+    &::after{
+        content: "⏳";
+    }
+
+    &:hover{
+        outline:1px solid red;
+    }
+
+}
+
+
