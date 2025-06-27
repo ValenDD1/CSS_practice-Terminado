@@ -1,0 +1,23 @@
+{
+  "name": "css_practice",
+  "version": "1.0.0",
+  "description": "its my first npm in css",
+  "main": "index.js",
+  "scripts": {
+    "primer_script": "echo 'hola mundo' "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ValenDD1/CSS_practice.git"
+  },
+  "author": "valentino",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ValenDD1/CSS_practice/issues"
+  },
+  "homepage": "https://github.com/ValenDD1/CSS_practice#readme",
+  "devDependencies": {
+    "stylelint": "^16.21.0",
+    "stylelint-config-standard": "^38.0.0"
+  }
+}

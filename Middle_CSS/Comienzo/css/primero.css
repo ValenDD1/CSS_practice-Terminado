@@ -1,0 +1,14 @@
+body{
+    background:conic-gradient(from 30deg, red ,blue);
+    color: red;
+
+    & h1{
+        font-size:xx-small;
+        text-align: center;
+    }
+
+    & main{
+        border-radius:20px;
+        color:blue;
+    }
+}
