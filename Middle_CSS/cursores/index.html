@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Cursores</h1>
+        <p>
+            podemos personalizar nuestros cursores  a nuestro gusto 
+        </p>
+    </header>
+    <main>
+        Ejemplos
+        <div>
+            Presionar
+            <button>Porque?</button>
+            
+        </div>
+    </main>
+
+
+    <!-- customizar un cursor de x tamaño con js -->
+    <script>
+        document.addEventListener('mousemove', (e) => {
+            const customCursor = document.getElementById('custom-cursor');
+            customCursor.style.left = `${e.pageX}px`;
+            customCursor.style.top = `${e.pageY}px`;
+        });
+    </script>
+    <!-- <div id="custom-cursor"></div> -->
+</body>
+</html>

@@ -4,7 +4,8 @@
   "description": "its my first npm in css",
   "main": "index.js",
   "scripts": {
-    "primer_script": "echo 'hola mundo' "
+    "primer_script": "echo 'hola mundo' ",
+    "gp":"node script_git.js"
   },
   "repository": {
     "type": "git",

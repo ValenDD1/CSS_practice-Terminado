@@ -1,0 +1,63 @@
+html{
+    scroll-behavior: smooth;
+}
+
+
+.smoth{
+    padding: 0;
+    margin: 0;
+    border:1px solid blue;
+
+    & nav ul {
+        display: flex;
+        list-style: none;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        & li a{
+            color: rgb(15 165 165);
+            border:1px solid navy;
+            border-radius:10px;
+            padding:.5rem;
+            font-family: monospace;
+            text-decoration: none;
+
+            &:hover{
+                color:red;
+                cursor: pointer;
+            }
+        }
+    }
+
+    & .secciones section{
+        width: 60%;
+        margin: 80px auto;
+        padding: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        border:5px dashed cadetblue;
+        flex-direction: column;
+
+        & h1{
+            color: red;
+            font-family: monospace;
+            font-size: xx-large;
+        }
+
+        & button{
+            border-radius: 50%;
+            padding: 20px;
+            font-size: 30px;
+            font-family: sans-serif;
+            color: aliceblue;
+            background-color: blue;
+            cursor: pointer;
+        }
+    }
+
+}
+

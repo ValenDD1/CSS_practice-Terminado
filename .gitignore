@@ -1,8 +1,13 @@
+
+# Dependencies
 node_modules/
 .env.*
 package-lock.json
 .stylelintrc.json
 
+
+# Scripts personales
+script.git.js
 
 
 
