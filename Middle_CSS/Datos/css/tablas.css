@@ -1,0 +1,118 @@
+
+
+caption{
+    caption-side: bottom;
+    border-radius: 10px;
+    border:1px solid red;
+    color: red;
+    margin-top: 5px;
+}
+
+table{
+    border:1px solid black;
+    border-collapse: separate;
+    margin:10px;
+
+    & th,
+    & td{
+        border: 1px solid red;
+    }
+}
+
+.colapse{
+    border-collapse: collapse;
+
+    & td{
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+        background-color: aqua;
+    }
+
+    & th{
+        padding: 10px;
+        border-color: green;
+        color:#000;
+        background: linear-gradient(to left, indigo,transparent);
+    }
+}
+
+.spacing{
+    border-spacing: 10px;
+    text-align: center;
+}
+
+.empty{
+    empty-cells: hide;
+}
+
+
+/* no se estilan 
+
+    tr,tbody,thead,tfoot{
+        padding: 10px;
+        color:red;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+*/
+
+
+.ejemplo5{
+    overflow-x: auto;
+}
+
+.tabla__css{
+    overflow: hidden;
+    border-radius: 20px;
+    width: 100%;
+    margin:0;
+    padding:0;
+    border-collapse: collapse;
+    text-align: center;
+    border:none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.tabla__css th{
+    border: none;
+    background-color: rgb(27 71 71);
+    padding:10px;
+    color:#fff;
+    transition: color 0.7s;
+    border-bottom: 5px solid rgb(15 37 37);
+
+    &:hover{
+        color:red;
+        cursor: pointer;
+    }
+}
+
+.tabla__css tbody td:nth-child(even){
+    border:none;
+    background-color: aliceblue;
+}
+
+.tabla__css tbody td:nth-child(odd){
+    border:none;
+    background-color: rgb(98 134 165);
+}
+
+.tabla__css tfoot tr td{
+    border:none;
+    background-color: rgb(54 63 112);
+}
+
+
+.pedro{
+    overflow: hidden;
+    border-collapse: collapse;
+    border-radius: 10px;
+}
+
+.pedro thead th{
+    background-color: rebeccapurple;
+}
+
+.pedro :is(td,th){
+    border:none
+}
