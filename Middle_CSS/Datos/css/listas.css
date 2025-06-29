@@ -1,0 +1,12 @@
+.lista1 li{
+    list-style: upper-roman outside none ;
+}
+
+.lista2 li{
+    list-style: none inside url("../../Interacciones/cursores/img/cursor_definido.cur");
+}
+
+.lista3 li::marker{
+    color: red;
+    content: "⏩";
+}
