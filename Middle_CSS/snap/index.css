@@ -1,0 +1,58 @@
+html{
+    scroll-behavior: smooth;
+}
+
+h1{
+    margin:0;
+}
+
+
+nav {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    background: #f564;
+    padding: 5px 10px;
+}
+
+.container {
+    height: 80vh;
+    width: 80%;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-padding: 0;
+    margin:auto
+}
+
+.slide {
+    height: 75%;
+    background: var(--color, #aaa);
+    scroll-snap-align: end;
+    scroll-margin: 0;
+    
+}
+
+.slide:nth-child(2) { --color: steelblue;}
+.slide:nth-child(3) { --color: tomato; }
+
+
+
+.container2{
+    max-width: 500px;
+    width:100%;
+    height:50vh;
+    display:flex;
+    margin:auto;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0;
+}
+
+img{
+    max-width:300%;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    scroll-snap-align: center;
+    scroll-margin: 0;
+
+}
