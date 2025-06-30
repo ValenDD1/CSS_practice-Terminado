@@ -1,0 +1,97 @@
+body{
+    background-color: blueviolet;
+}
+
+img{
+    width: 300px;
+    height: 200px;
+    image-rendering: pixelated;
+    filter: drop-shadow(20px 20px 0 #000);
+    
+}
+
+.filter{
+    --drop-shadow: 0 0 5px #000;
+
+    background-color: red;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    border:1px solid white;
+    filter: 
+        drop-shadow(var(--drop-shadow))
+        drop-shadow(var(--drop-shadow))
+        drop-shadow(var(--drop-shadow))
+        drop-shadow(var(--drop-shadow))
+        invert(10%)    
+    ;
+}
+
+.filter-parrafo{
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-family: monospace;
+    filter:drop-shadow(10px 10px 3px #000);
+    font-size: 5rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-weight: bolder;
+    background-clip: text;
+    background-image: url("https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?cs=srgb&dl=pexels-souvenirpixels-417074.jpg&fm=jpg");
+    -webkit-text-stroke: 1px #fff;
+}
+
+.pieza{
+    clip-path: polygon(
+        50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%,
+        50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%
+    );
+    background-color: gold;
+    width: 200px;
+    height: 200px;
+}
+
+.trozo-pieza{
+    filter:
+        drop-shadow(0 0 5px white)
+        drop-shadow(5px 5px 0 red)
+        drop-shadow(8px 8px 0 green)
+        drop-shadow(10px 10px 0 yellow)
+        drop-shadow(12px 12px 0 blue)
+        
+        ;
+}
+
+.imagen-3d {
+    filter: 
+        /* Sombra base difuminada */
+        drop-shadow(0 10px 15px rgb(0 0 0 / 50%))
+        
+        /* Sombra neón azul (efecto de "aura") */
+        drop-shadow(0 0 20px rgb(65 105 225 / 80%))
+        
+        /* Sombra interior (simula luz frontal) */
+        drop-shadow(0 -5px 10px rgb(255 255 255 / 30%))
+        
+        /* Sombra desplazada con degradado (efecto 3D) */
+        drop-shadow(15px 15px 0 rgb(255 0 255 / 20%));
+    transform: 
+        perspective(1000px) 
+        rotateX(10deg) 
+        rotateY(-5deg);
+    transition: all 0.5s ease;
+    border-radius: 10px;
+}
+
+.imagen-3d:hover {
+  filter:
+    drop-shadow(0 20px 25px rgb(0 0 0 / 70%))
+    drop-shadow(0 0 30px rgb(100 149 237 / 90%))
+    drop-shadow(0 -10px 15px rgb(255 255 255 / 50%))
+    drop-shadow(20px 20px 0 rgb(255 0 255 / 30%))
+    sepia(23%);
+  transform: 
+    perspective(1000px) 
+    rotateX(15deg) 
+    rotateY(-10deg);
+}
