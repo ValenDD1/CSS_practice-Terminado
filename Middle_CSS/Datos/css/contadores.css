@@ -1,0 +1,45 @@
+
+.item{
+    counter-increment: numero;
+}
+
+.item::before{
+    content:counter(numero)" ";
+    color:red;
+}
+
+
+/* crear un contador */
+@counter-style mi-primer-contador{
+    system:cyclic;
+    symbols: "uno" "dos" "tres";
+    suffix: "» ";
+}
+
+@counter-style dice {
+    system: additive;
+    additive-symbols: 6 ⚅, 5 ⚄, 4 ⚃, 3 ⚂, 2 ⚁, 1 ⚀;
+    suffix: " ";
+}
+
+.lista li{
+    list-style: dice;
+}
+
+.lista li::marker{
+    color: red;
+}
+
+
+
+ol{
+    list-style-type: none;
+    counter-reset: lista;
+}
+
+ol li::before{
+    counter-increment: lista;
+    content: counters(lista,".")" ";
+}
+
+
