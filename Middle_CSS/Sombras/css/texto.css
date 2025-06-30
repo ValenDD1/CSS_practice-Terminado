@@ -1,0 +1,86 @@
+body{
+    background-color: #000;
+    text-align: center;
+    font-family: monospace;
+}
+
+.texto{
+    font-size:3rem;
+    font-weight: bolder;
+    color:#fff;
+}
+
+
+.forma1{
+    text-shadow: 5px 5px 5px indigo;
+}
+
+.forma2{
+    text-shadow: 0 0 20px white;
+}
+
+.forma3{
+    text-shadow: 0 20px rgb(201 78 89 / 50%);
+}
+
+.forma4{
+    text-shadow: 40px 0 2px rgb(10 89 90 /35%);
+}
+
+.forma5{
+    text-shadow: -10px -10px 50px rgb(28 28 238);
+}
+
+.forma6{
+    color: #000;
+    text-shadow:
+        0 0 0 #000,
+        0 2px 0  #fff,
+        0 0 3px gray,
+        0 2px 5px rgb(10 89 90 );
+}
+
+.forma7{
+    text-shadow: 
+        50px 50px 5px hotpink,
+        40px 40px 5px green,
+        30px 30px  5px red,
+        20px 20px 5px blue,
+        10px 10px 5px yellow,
+        0 0 50px #fff;
+}
+
+.forma8{
+    text-shadow: 
+        20px 20px 20px indigo,
+        -20px -20px 20px indigo ;
+}
+
+.forma9{
+    text-shadow: 
+        100px calc(1rem + 20px) 20px indigo,
+        -100px calc(1rem + 20px * -1) 20px indigo,
+        0 0 200px #fff,
+        0 0 200px #fff;
+}
+
+.forma10{
+    text-shadow: 
+        /* Capa base neon */
+        0 0 5px #f0f, 
+        0 0 10px #f0f, 
+        0 0 20px #f0f,
+        /* Sombra 3D */
+        2px 2px 0 #f00,
+        4px 4px 0 #f60,
+        6px 6px 0 #fc0,
+        8px 8px 0 #3c3,
+        10px 10px 0 #39f,
+        12px 12px 0 #c3f,
+        /* Efecto de profundidad con blur */
+        5px 5px 15px rgb(255 0 0 / 70%),
+        -5px -5px 15px rgb(0 255 255 / 70%),
+        /* Brillo exterior */
+        0 0 30px rgb(255 255 0 / 50%),
+        0 0 60px rgb(255 0 255 / 30%);
+}
