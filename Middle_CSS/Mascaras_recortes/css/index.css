@@ -1,0 +1,47 @@
+.ejemplo{
+    width:200px;
+    height:200px;
+    background: navy;
+    box-sizing: border-box;
+}
+
+
+main{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+}
+/* stylelint-disable rule */
+.ejemplo1{
+    clip-path: 
+        circle(50% at center);
+}
+/* stylelint-enable rule */
+
+.ejemplo2{
+    border:2px solid red;
+    clip-path: rect(0 150px 150px 0 );
+}
+
+.ejemplo3{
+    border:5px solid red;
+    clip-path: inset(0 150px 150px 0 );
+}
+
+.ejemplo4{
+    clip-path: xywh(12px 34px 35px 45px round 30px );
+}
+
+.ejemplo5{
+    clip-path: ellipse(50% 20% at center);
+}
+
+.ejemplo6{
+    clip-path: polygon(10% 30%,30% 45% ,56% 100%);
+}
+
+.ejemplo7{
+    clip-path: path('M0,0 L100,0 L90,100 L10,100 Z');
+}

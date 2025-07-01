@@ -12,3 +12,27 @@ main{
     margin:auto;
 }
 
+
+.bodu{
+    background-color: #fff;
+    color:#000;
+    font-family:monospace;
+}
+
+.ejemplo1{
+    background: url("../../beginner_css/Fondos/images/arbol-solitario_181624-46361.avif");
+    background-position: center;
+    background-color: purple;
+    background-repeat: no-repeat;
+    width:400px;
+    height:400px;
+    display:grid;
+    place-items: center;
+    background-blend-mode: darken;
+
+}
+
+.ejemplo1 img{
+    isolation: isolate;
+}
+
