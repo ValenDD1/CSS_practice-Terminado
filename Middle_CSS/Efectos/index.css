@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(167 67 167);
+    color: #fff;
+    font-family:monospace;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    gap:30px;
+    margin:auto;
+}
+

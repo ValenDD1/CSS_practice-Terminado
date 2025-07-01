@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Efectos con Filter</h1>
+        <p>
+            podemos hacer varios filtros en css para tenre un resualtado satisfactorio o horrible
+        </p>
+    </header>
+    <main>
+        
+        <img src="familia-feliz.jpg" alt="" id="imagen">
+        <div class="inputs">
+            <label for="saturate">Saturacion</label>
+            <input type="range" name="saturacion" min="0" max="100" value="100" id="saturate" list="pedro">
+            <label for="saturate">Brillo</label>
+            <input type="range" name="brillo" min="0" max="400" value="100" id="brillo" list="pedro">
+            <label for="saturate">contraste</label>
+            <input type="range" name="contraste" min="0" max="100" value="100" id="contraste" list="pedro">
+            <label for="hue">hue-rotate</label>
+            <input type="range" name="hue" min="0" max="360" value="0" id="hue" list="pedro">
+            <label for="grayscale">grayscale</label>
+            <input type="range" name="gray" min="0" max="100" value="0" id="gray" list="pedro">
+            <label for="blur"> blur </label>
+            <input type="range" name="blur" min="0" max="500" value="0" id="blur" list="pedro">
+            <label for="sepia"> sepia </label>
+            <input type="range" name="sepia" min="0" max="100" value="0" id="sepia" list="pedro">
+            <label for="invert"> invert </label>
+            <input type="range" name="invert" min="0" max="100" value="0" id="invert" list="pedro">
+            <label for="opa"> Opacity </label>
+            <input type="range" name="opa" min="0" max="100" value="100" id="opa" list="pedro">
+        </div>
+        
+        
+    </main>
+    <script>
+        const inputs = document.querySelectorAll('.inputs input[type="range"]');
+        const img = document.querySelector('#imagen');
+
+        // Objeto para almacenar los valores actuales de los filtros
+        const filters = {
+        saturate: 100,
+        brightness: 100,
+        contrast: 100,
+        hue: 0,
+        grayscale: 0,
+        blur: 0,
+        sepia: 0,
+        invert: 0,
+        opacity: 100
+        };
+
+        // Función para aplicar todos los filtros
+        function applyFilters() {
+            img.style.filter = `
+                saturate(${filters.saturate}%)
+                brightness(${filters.brightness}%)
+                contrast(${filters.contrast}%)
+                hue-rotate(${filters.hue}deg)
+                grayscale(${filters.grayscale}%)
+                blur(${filters.blur}px)
+                sepia(${filters.sepia}%)
+                invert(${filters.invert}%)
+                opacity(${filters.opacity}%)
+            `;
+        }
+
+        // Añadir event listeners a todos los inputs
+        inputs.forEach(input => {
+        input.addEventListener('input', (e) => {
+            const filterName = e.target.name;
+            const value = e.target.value;
+            
+            // Actualizar el valor en el objeto filters
+            switch(filterName) {
+            case 'saturacion':
+                filters.saturate = value;
+                break;
+            case 'brillo':
+                filters.brightness = value;
+                break;
+            case 'contraste':
+                filters.contrast = value;
+                break;
+            case 'hue':
+                filters.hue = value;
+                break;
+            case 'gray':
+                filters.grayscale = value;
+                break;
+            case 'blur':
+                filters.blur = value;
+                break;
+            case 'sepia':
+                filters.sepia = value;
+                break;
+            case 'invert':
+                filters.invert = value;
+                break;
+            case 'opa':
+                filters.opacity = value;
+                break;
+            }
+            
+            // Aplicar los filtros
+            applyFilters();
+            
+            // Mostrar el valor actual (opcional)
+            console.log(`${filterName}: ${value}`);
+        });
+        });
+
+        // Aplicar filtros iniciales
+        applyFilters();
+        
+
+
+    </script>
+</body>
+</html>

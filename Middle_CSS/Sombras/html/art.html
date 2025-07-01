@@ -12,5 +12,54 @@
     <div class="art1"></div>
     <div class="art2"></div>
     <div class="art3"></div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="avatar">
+        <div class="pixel"></div>
+    </div>
+
+    <script>
+        const COLORS = {
+            0: "transparent",
+            1: "#000",
+            2: "#fff",
+            3: "#ffcc80",
+            4: "#cc984f",
+            5: "#1a1a1a",
+            6: "#ebb267",
+            7: "#0d2061",
+            8: "#17ffff",
+            9: "#cc2554",
+            10: "#e65100"
+        }
+
+        const PIXEL_ART = [
+            0,0,0,0,2,2,2,2,2,2,2,2,0,0,0,0,
+            0,0,0,2,2,1,1,1,1,1,1,2,2,2,0,0,
+            0,0,2,2,1,1,1,1,1,1,1,1,1,2,0,0,
+            0,0,2,1,1,1,4,4,4,4,5,1,1,2,0,0,
+            0,0,2,1,1,5,3,3,3,3,6,6,2,2,0,0,
+            0,0,2,1,5,3,3,1,3,3,1,3,2,0,0,0,
+            0,0,2,1,5,3,3,1,3,3,1,3,2,0,0,0,
+            0,0,2,1,1,3,3,3,6,6,6,3,2,0,0,0,
+            0,0,2,1,1,4,3,3,3,3,3,3,2,0,0,0,
+            0,0,2,2,1,1,4,4,4,1,1,3,2,0,0,0,
+            0,0,0,2,2,1,1,1,4,4,1,4,2,0,0,0,
+            0,0,2,2,1,5,1,1,1,1,1,1,2,0,0,0,
+            0,0,2,1,5,1,1,1,1,1,1,1,2,0,0,0,
+            0,0,2,1,5,1,1,1,8,1,1,5,2,0,0,0,
+            0,0,2,5,1,1,1,9,7,7,1,5,2,0,0,0,
+            0,0,2,4,4,1,1,7,10,8,1,5,2,0,0,0
+        ];
+
+        const boxShadow = PIXEL_ART.map((pixel, index) => {
+            const x = 16 * (index % 16);
+            const y = 16 * ~~(index / 16);
+            return `${x}px ${y}px ${COLORS[pixel]}`;
+        }).join(",\n");
+
+        const avatar = document.querySelector(".avatar");
+        avatar.style.setProperty("--shadow", boxShadow);
+    </script>
 </body>
 </html>

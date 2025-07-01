@@ -92,3 +92,31 @@ body{
 
     ;
 }
+
+.avatar {
+    width: 256px;
+    margin: 2em auto;
+    height: 256px;
+    background: linear-gradient(#8A4BEC, #E91DCF);
+    overflow: hidden;
+    border: 10px solid #fff;
+    border-bottom-width: 50px;
+    box-shadow:
+        2px 2px 8px #0006,
+        4px 4px 25px #0008 inset;
+}
+
+.pixel {
+    margin-left: 17px;
+    height: 17px;
+    width: 17px;
+    box-shadow: var(--shadow);
+    transform: rotate(5deg);
+}
+
+
+
+
+
+
+
