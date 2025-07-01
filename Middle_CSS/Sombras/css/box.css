@@ -1,0 +1,90 @@
+body{
+    background-color: rgb(91 32 133);
+    
+}
+
+.ejemplos{
+    display:flex;
+    gap:30px;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.item{
+    margin-top:10px;
+    width:200px;
+    height: 200px;
+    border-radius: 10px;
+    border: 1px solid white;
+    background:linear-gradient(to top,rgb(101 53 134),rgb(86 20 133));
+}
+
+.forma1{
+    box-shadow: 2px 2px 10px #000 ;
+}
+
+.forma2{
+    box-shadow: -10px -10px 20px #67a5;
+}
+
+.forma3{
+    box-shadow: 40px -40px 0 indigo;
+}
+
+.forma4{
+    box-shadow: 10px 10px 5px 10px indianred;
+}
+
+.forma5{
+    box-shadow: 1rem 2.4em 39px -2px darkred inset;
+}
+
+.forma6{
+    box-shadow: 
+        0 0 15px 2px purple,
+        0 10px 15px 2px rebeccapurple,
+        0 0 15px 2px #000;
+}
+
+.forma7{
+    box-shadow: 
+        0 0 30px 10px royalblue inset,
+        10px 10px 15px 0 rgb(143 48 48),
+        11px 11px 15px 0 rgb(87 33 33);
+}
+
+.forma8{
+    box-shadow: 
+        2px 2px 0 0 red ,
+        4px 4px 0 0 yellow,
+        6px 6px 0 0 royalblue,
+        8px 8px 0 0 greenyellow,
+        10px 10px 0 0  hotpink;
+}
+
+.forma9{
+    box-shadow: 
+        0 20px 0 0 darkcyan,
+        20px 0 0 0 saddlebrown,
+        0 -20px 0 0 darkorchid,
+        -20px 0 0 0 darkkhaki
+    ;
+}
+
+.forma10{
+    background: #fff;
+    box-shadow:
+        /* Sombra exterior difuminada */
+        0 10px 20px rgb(0 0 0 / 20%),
+        /* Sombra interior (inset) */
+        inset 0 -5px 15px rgb(255 105 180 / 50%),
+        /* Efecto neón */
+        0 0 10px 5px rgb(100 200 255 / 60%),
+        /* Sombra desplazada con color vibrante */
+        15px 15px 0 0 rgb(255 215 0 / 70%),
+        /* Sombra invertida */
+        -10px -10px 12px 2px rgb(50 205 50 / 40%),
+        /* Efecto de profundidad 3D */
+        5px 5px 0 3px rgb(138 43 226 / 30%);
+}
