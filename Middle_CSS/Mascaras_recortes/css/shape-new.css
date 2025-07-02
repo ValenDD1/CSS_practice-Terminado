@@ -1,0 +1,23 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.caja{
+    width: 200px;
+    height: 200px;
+    background-color: #000;
+    clip-path: shape(from 0 0, hline to calc(50% - 50px), arc by calc(2 * 50px) 0 of 50px, hline to 100%, vline to 100%, hline to 0, close );
+}
+
+@supports  not (clip-path:shape(from 0 0, hline to calc(50% - 50px))){
+    .caja::after{
+        content: '❌ aun no esta soportado';
+        color: white;
+        font-size: xx-large;
+        text-shadow: 0 0 10px indigo;
+
+    }
+}
