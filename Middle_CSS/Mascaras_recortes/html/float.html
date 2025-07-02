@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/float.css">
+</head>
+<body>
+    <header>
+        <h1>Float</h1>
+        <p>El float es un valor de CSS que permite que un elemento se desplace hacia la izquierda o hacia la derecha de su contenedor.</p>
+    </header>
+    <main>
+        
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus saepe possimus, itaque, sapiente totam quasi deserunt nesciunt quos dolorem exercitationem, voluptate earum eos ratione optio aut. Eum praesentium alias maxime?
+        </p>
+        <div class="caja"></div>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores, impedit.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quia esse ipsa facere minus. Dolorum doloribus modi voluptate minima nulla natus. Fuga laboriosam veniam quos minus delectus accusantium at reiciendis?
+        </p>
+        <button>Cambiar a left</button>
+        
+        
+    </main>
+    <script>
+        const button = document.querySelector('button');
+        button.addEventListener('click',()=>{
+            const caja = document.querySelector('.caja');
+            if (caja.style.float === 'right') {
+                button.textContent = 'Cambiar a left';
+                caja.style.float = 'left';
+                
+                
+            } else {
+                button.textContent = 'Cambiar a right';
+                caja.style.float = 'right';
+                
+            }
+        });
+    </script>
+</body>
+</html>

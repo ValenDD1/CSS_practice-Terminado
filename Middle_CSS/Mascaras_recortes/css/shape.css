@@ -1,0 +1,57 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+header{
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+}
+
+.caja{
+    width: 60%;
+    margin: 10px auto;
+    clear: both;
+}
+
+img{
+    width: 30%;
+    height: 30%;
+    object-fit: cover;
+    object-position: center;
+    filter: drop-shadow( 0 0 10px rgb(0 0 0 / 50%));
+    padding: 10px;
+    shape-outside: url("../../../beginner_css/Fondos/images/logo_mario.png");
+    shape-margin: 10px;
+    shape-image-threshold: 50%;
+    float: left;
+}
+
+img + p{
+    font-family: monospace;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.img2{
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    object-position: center;
+    filter: drop-shadow( 0 0 10px rgb(0 0 0 / 50%));
+    padding: 10px;
+    shape-outside: radial-gradient(circle at 50% 50%, #000 0%, #fff 100%);
+    shape-image-threshold: 50%;
+    float: right;
+}
+
+
+.caja-contenedor{
+    border: 1px solid black;
+    width: 70%;
+    margin: 10px auto;
+
+}
