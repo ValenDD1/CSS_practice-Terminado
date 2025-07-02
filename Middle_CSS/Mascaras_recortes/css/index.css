@@ -3,6 +3,7 @@
     height:200px;
     background: navy;
     box-sizing: border-box;
+    border:5px solid red;
 }
 
 
@@ -16,32 +17,43 @@ main{
 /* stylelint-disable rule */
 .ejemplo1{
     clip-path: 
-        circle(50% at center);
+        circle(30% at 0 50%);
 }
 /* stylelint-enable rule */
 
 .ejemplo2{
     border:2px solid red;
-    clip-path: rect(0 150px 150px 0 );
+    clip-path: rect(20px 150px 60px 50px);
 }
 
 .ejemplo3{
-    border:5px solid red;
-    clip-path: inset(0 150px 150px 0 );
+    clip-path: inset(0 100px 0 0 round 20px);
 }
 
 .ejemplo4{
-    clip-path: xywh(12px 34px 35px 45px round 30px );
+    clip-path: xywh(50px 50px 200px 50px);
 }
 
 .ejemplo5{
-    clip-path: ellipse(50% 20% at center);
+    clip-path: ellipse(30px 150px at 0 50%);
 }
 
 .ejemplo6{
-    clip-path: polygon(10% 30%,30% 45% ,56% 100%);
+    clip-path: polygon(50% 0,0 50%,25% 100%, 75% 100%,100% 50% );
 }
 
 .ejemplo7{
-    clip-path: path('M0,0 L100,0 L90,100 L10,100 Z');
+    clip-path: path('M 50,30 Q 50,0 70,0 T 90,30 T 50,90 T 10,30 T 30,0 T 50,30 Z');
+}
+
+.ejemplo8{
+    background: 
+    conic-gradient(red, yellow, lime, aqua, blue, magenta, red);
+    outline: 1px dashed white;
+    clip-path: polygon(
+    evenodd,
+    50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%,
+    50% 20%, 80% 40%, 75% 70%, 25% 70%, 20% 40%, 50% 20%
+    
+    );
 }
