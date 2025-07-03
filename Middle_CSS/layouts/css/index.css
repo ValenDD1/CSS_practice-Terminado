@@ -1,0 +1,112 @@
+/* Estilos para layouts CSS */
+
+/* Reset básico */
+* ,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Sección principal */
+main {
+    min-height: 500px;
+}
+
+.cajita{
+    width:100px;
+    height:100px;
+    background-color:red;
+    display:inline-block;
+}
+
+span{
+    font-family:monospace;
+    font-size:5em;
+    color:green;
+    display:block;
+}
+
+div.ejemplo2 ul{
+    border:1px solid red;
+    border-radius:10px;
+    color:hotpink;
+}
+
+div.ejemplo2 li{
+    list-style:decimal;
+
+}
+
+.lista div{
+    display:list-item;
+}
+
+table{
+    border:1px solid blue;
+}
+
+div.table{
+    display:table;
+    border:1px solid blue;
+    padding:5px;
+
+    & .row{
+        display:table-row;
+
+        & .cel{
+            display:table-cell;
+            
+        }
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(2, 100px);
+    gap: 10px;
+}
+  
+.item {
+    background: deeppink;
+}
+
+.middle {
+  display: contents;
+}
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+} 
