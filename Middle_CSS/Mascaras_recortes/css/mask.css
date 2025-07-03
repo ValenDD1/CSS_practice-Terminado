@@ -1,0 +1,93 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img:first-of-type{
+    border: 1px solid red;
+    filter: brightness(0.5);
+    mask-image: linear-gradient(to left,black 70%,transparent );
+    float: left;
+    margin: auto;
+}
+
+img:nth-of-type(2){
+    border: 1px solid red;
+    margin-left: 5px;
+    mask-image: radial-gradient(circle at center,transparent 10%,black 15% );
+}
+
+img:nth-of-type(3){
+    border: 1px solid red;
+    mask-image: conic-gradient(from 0deg,transparent 50%,black 51% );
+}
+
+img:nth-of-type(4){
+    border: 1px solid red;
+    mask-image: repeating-radial-gradient(circle at center,black 10%,transparent 20%);
+}
+
+img:nth-of-type(5){
+    border: 1px solid red;
+    mask-image: repeating-conic-gradient(from 0deg,transparent 0%,black 10% );
+}
+
+img:nth-of-type(6){
+    border: 1px solid red;
+    mask-image: radial-gradient(circle 100px at center ,black 75% , transparent 76%);
+    
+}
+
+img:nth-of-type(7){
+    border: 1px solid red;
+    mask-image: 
+        radial-gradient(circle 100px at center ,black 50%,transparent 51%),
+        url("../svg/estrella.svg");
+    mask-repeat: no-repeat,repeat;
+    mask-position: center,0%;
+    mask-mode: alpha,luminance;
+    mask-composite: subtract,add;
+    mask-size: 100px;
+}
+
+img:nth-of-type(8){
+    border: 1px solid red;
+    mask-image: url("../svg/salpicada_pro.svg");
+    mask-size: 300px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-clip: padding-box;
+    mask-origin: padding-box;
+}
+
+
+.boxer{
+    width: 200px;
+    height: 200px;
+    background: repeating-conic-gradient(from 0deg,red 0%,black 10%,white 20%,indigo 30%);
+    border: 1px solid red;
+    mask: url("../../../beginner_css/Fondos/images/logo_mario.png");
+    mask-mode: alpha;
+    mask-size: 200px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+img:nth-of-type(n):hover{
+    mask-image: none;
+}
+
