@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+html{
+    scrollbar-width: none;
+    scrollbar-color: indigo beige;
+}
+
 img:first-of-type{
     border: 1px solid red;
     filter: brightness(0.5);
