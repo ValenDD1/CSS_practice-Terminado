@@ -1,0 +1,54 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.ejemplo1{
+    display:inline flow; 
+    width: 100%;
+    height: 300px;
+    background: seagreen;
+    border: 1px solid red;
+
+    & span{
+        color:navy;  
+    }
+}
+
+.ejemplo2{
+    display: inline flow-root;
+    width: 50%;
+    height: 200px;
+    background-color: navajowhite;
+    border: 1px solid red;
+
+    & span{
+        color:navy;  
+    }
+}
+
+
+.ejemplo3{
+    display: block flow;
+    width: 50%;
+    height: 200px;
+    background-color: rgb(207 135 27);
+    border: 1px solid red;
+
+    & span{
+        color:navy;  
+    }
+}
+
+.ejemplo4{
+    display: block flow-root;
+    width: 50%;
+    height: 200px;
+    background-color: rgb(105 111 202);
+    border: 1px solid red;
+
+    & span{
+        color:navy;  
+    }
+}
