@@ -1,0 +1,60 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.ejemplo1{
+    columns: 100px 3;
+    line-height: 2.5;
+    column-rule: 2px dotted greenyellow;
+    column-gap: 10px;
+
+    p{
+        column-span: all;
+        font-size: xx-large;
+        font-family: Arial,monospace;
+        text-align: center;
+        font-weight: bold;
+    }
+}
+
+.ejemplo2{
+    columns: 100px 3;
+    column-rule: 2px dotted greenyellow;
+    column-gap: 10px;
+
+    p{
+        column-span: all;
+        font-size: xx-large;
+        font-family: Arial,monospace;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    p:last-of-type{
+        margin:20px;
+        background-color: rgb(105 111 202);
+    }
+}
+
+
+
+
+main > div {
+    margin-bottom: 50px;
+}
+
+@media (width <= 768px) {
+    .ejemplo1{
+        columns: 100px 2;
+        column-rule: 2px dotted rgb(241 14 14);
+        column-gap: 10px;
+    }
+
+    .ejemplo2{
+        columns: 100px 2;
+        column-rule: 2px dotted rgb(250 4 4);
+        column-gap: 10px;
+    }
+}
