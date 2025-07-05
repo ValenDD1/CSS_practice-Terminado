@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <header>
+        <h1>Flexbox</h1>
+        <p>
+            Flexbox es un modelo de diseño CSS que permite crear diseños flexibles y responsivos.
+        </p>
+    </header>
+    <main>
+        <h2>Ejemplos:</h2>
+        <div class="flex-1">
+            <div class="cajita">item1</div>
+            <div class="cajita">item2</div>
+            <div class="cajita">item3</div>
+            <div class="cajita">item4</div>
+            <div class="cajita">item5</div>
+            <div class="cajita">item6</div>
+            <div class="cajita">item7</div>
+            <div class="cajita">item8</div>
+            <div class="cajita">item9</div>
+            <div class="cajita">item10</div>
+            <div class="cajita">item11</div>
+            <div class="cajita">item12</div>
+            <div class="cajita">item13</div>
+            <div class="cajita">item14</div>
+            <div class="cajita">item15</div>
+            <div class="cajita">item16</div>
+            <div class="cajita">item17</div>
+            <div class="cajita">item18</div>
+            <div class="cajita">item19</div>
+            <div class="cajita">item20</div>
+            <div class="cajita">item21</div>
+            <div class="cajita">item22</div>
+            <div class="cajita">item23</div>
+            <div class="cajita">item24</div>
+            <div class="cajita">item25</div>
+            <div class="cajita">item26</div>
+            <div class="cajita">item27</div>
+            <div class="cajita">item28</div>
+            <div class="cajita">item29</div>
+            <div class="cajita">item30</div>
+            <div class="cajita">item31</div>
+            <div class="cajita">item32</div>
+            <div class="cajita">item33</div>
+
+        </div>
+        <select name="" id="direccion">
+            <option value="direccion" selected disabled >Direccion</option>
+            <option value="row">row</option>
+            <option value="row-reverse">row-reverse</option>
+            <option value="column">column</option>
+            <option value="column-reverse">column-reverse</option>
+        </select>
+        <select name="" id="forma">
+            <option value="forma" selected disabled>Forma</option>
+            <option value="wrap">wrap</option>
+            <option value="nowrap">nowrap</option>
+            <option value="wrap-reverse">wrap-reverse</option>
+        </select>
+        <input type="number" placeholder="row-gap" id="row-gap" >
+        <input type="number" placeholder="column-gap" id="column-gap">
+        
+    </main>
+    <script>
+        const selectDireccion = document.getElementById('direccion');
+        const selectForma = document.getElementById('forma');
+        const inputRowGap = document.getElementById('row-gap');
+        const inputColumnGap = document.getElementById('column-gap');
+        const flex1 = document.querySelector('.flex-1');
+
+        selectDireccion.addEventListener('change',()=>{
+            flex1.style.flexDirection = selectDireccion.value;
+        });
+        selectForma.addEventListener('change',()=>{
+            flex1.style.flexWrap = selectForma.value;
+        });
+        inputRowGap.addEventListener('input',()=>{
+            flex1.style.rowGap = inputRowGap.value + 'px';
+        });
+        inputColumnGap.addEventListener('input',()=>{
+            flex1.style.columnGap = inputColumnGap.value + 'px';
+        });
+
+    </script>
+</body>
+</html>
