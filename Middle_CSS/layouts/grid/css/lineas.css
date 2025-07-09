@@ -1,0 +1,81 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    height: 100vh;
+}
+
+.item{
+    background-color: blueviolet;
+    text-align: center;
+    align-content: center;
+    font-size: 2rem;
+    color: #fff;
+    font-family: monospace;
+}
+
+.grid-1{
+    display: grid;
+    height: 400px;
+    grid-template-columns: [col-1] 1fr [col-2] 1fr [col-3] 1fr [col-4] 1fr;
+    grid-template-rows: [row-1] 1fr [row-2] 1fr;
+    gap: 5px;
+    background-color: gray;
+    margin-bottom: 10px;
+}
+
+.grid-2{
+    display: grid;
+    height: 400px;
+    grid-template-columns: [column-start] 1fr [middle-column] 1fr [column-end] ;
+    grid-template-rows: [row-start] 1fr [middle-start] 1fr [middle-end] 1fr [row-end] ;
+    gap: 5px;
+    background-color: gray;
+}
+
+.header{
+    grid-column: column-start / column-end;
+
+    /*
+        podemos hacerlo mas pequeños con 
+        grid-column:column
+    */
+    background-color: rgb(110 155 194);
+}
+
+.aside{
+    grid-column: column-start / middle-column;
+    background-color: red;
+}
+
+.main{
+    grid-column: middle-column / column-end;
+    grid-row: middle-start / middle-end;
+    background-color: rgb(139 201 111);
+}
+
+.footer{
+    /*
+        esta es la forma mas larga pero podemos hacerlo mas pequeño con grid-area
+        grid-column: column-start / column-end;
+        grid-row: middle-end / row-end;
+    */
+    background-color: rgb(79 70 168);
+    grid-area: middle-end/ column-start/ row-end / column-end;
+}
+
+/*
+   Podemos usaar Grid Area  para hacerlo mas reducido
+   grid-area: column-start / row-start / column-end / row-end;
+   grid-area: column / row;
+   grid-area: middle-end/ column-start/ row-end / column-end;
+   grid-area: middle-end/ auto/ row-end / auto;
+*/
+
+
+
+

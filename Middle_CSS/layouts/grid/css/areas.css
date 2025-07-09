@@ -1,10 +1,6 @@
 .grid-1{
     display: grid;
-    grid-template-areas:"header header "
-                        "aside main "
-                        "footer footer ";
-    grid-template-columns: 1fr 2fr ;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template:"header header " 1fr "aside main " 2fr "footer footer " 1fr / 0.5fr 2fr;
     height: 100vh;
 }
 
@@ -26,4 +22,10 @@
 .grid-1 footer{
     grid-area: footer;
     background-color: yellow;
+}
+
+@media screen and (width <= 768px) {
+    .grid-1{
+        grid-template:"header " 1fr "aside " 0.5fr "main " 1fr "footer " 1fr / 1fr;
+    }
 }
