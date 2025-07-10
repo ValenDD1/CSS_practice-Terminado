@@ -13,7 +13,7 @@ body{
     height: 500px;
     width: 800px;
     grid-auto-rows: 100px 50px ;
-    grid-template-columns: 100px 50px 100px ;
+    grid-template-columns: 100px 50px 100px ;;
     place-content: center;
     background-color: #808080;
     grid-auto-flow: row dense;
@@ -34,3 +34,34 @@ body{
 .item-1{
     grid-column-start: 2;
 }
+
+
+#field {
+    display: grid;
+    height: 500px;
+    background-color: #808080;
+    gap:15px;
+    grid-template:1fr 1fr / 200px 1fr;
+
+    
+}
+
+.greenLand{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    place-self:center;
+}
+
+.redLand {
+    width: 100px;
+    height: 100px;
+    place-self:center;
+    background-color: red;
+}
+
+
+
+
+
+
