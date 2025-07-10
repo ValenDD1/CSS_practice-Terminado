@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/absolute.css">
+</head>
+<body>
+    <header>
+        <h1>Absolute</h1>
+    </header>
+    <main>
+        Ejemplos
+        <div class="content" id="content">
+            <div class="box">
+                Absolute
+            </div>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores officiis 
+                corporis quisquam similique odio. Ab excepturi non beatae omnis obcaecati soluta porro veniam ut,
+                eveniet itaque ex rerum libero repellat?
+            </p>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores officiis 
+                corporis quisquam similique odio. Ab excepturi non beatae omnis obcaecati soluta porro veniam ut,
+                eveniet itaque ex rerum libero repellat?
+            </p>
+            
+        </div>
+        <select name="" id="select">
+            <option value="">Sin relative</option>
+            <option value="relative">Con relative</option>
+            <option value="sticky">Pegado</option>
+        </select>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br>
+    </main>
+    <script>
+        const select = document.getElementById("select");
+        select.addEventListener("change", (e) => {
+            const value = e.target.value;
+            if (value === "relative") {
+                document.getElementById("content").style.position = "relative";
+                document.querySelector(".box").textContent = "Relative";
+            }else if(value === "sticky"){
+                document.getElementById("content").style.position = "";
+                document.querySelector(".box").style.position = "sticky";
+                document.querySelector(".box").textContent = "Sticky";
+            }else{
+                document.getElementById("content").style.position = "static"; 
+                document.querySelector(".box").textContent = "Absolute";
+            }
+        });
+    </script>
+</body>
+</html>

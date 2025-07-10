@@ -1,0 +1,51 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+header{
+    margin-bottom: 10px;
+    background-color: blueviolet;
+    border:1px solid black;
+    text-align:center;
+    padding:20px 0;
+}
+
+body{
+    display:grid;
+    height: 100vh;
+    grid-template-rows: auto 1fr;
+}
+
+main{
+    padding:0 10px;
+    border:1px solid;
+    background-color: turquoise;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content{
+    background:gray;
+    border:1px solid ;
+    width:60%;
+    height:200px;
+    overflow-y: scroll;
+}
+
+.box{
+    width:100px;
+    height:100px;
+    background:red;
+    text-align: center;
+    align-content: center;
+    inset: 0;
+    position: absolute;
+}
+
+select{
+    margin-top:40px;
+}
