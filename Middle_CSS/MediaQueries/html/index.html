@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="fixed">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Responsive en la Web</h1>
+            <p>
+                se puede llegar a hacer responsive nuestra pagina de multiples maneras ,una pagina interesante seria 
+                <a href="https://gs.statcounter.com/screen-resolution-stats">StatsCounter</a>
+                que nos permite ver las estadisticas de los dispositivos que usan nuestras paginas web.
+            </p>
+        </header>
+        <main>
+            <div class="box">
+                <h2></h2>Hola Mundo</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+                </p>
+            </div>
+            <div class="box-2">
+                <h2>Hola Mundo</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+                </p>
+            </div>
+            <div class="js">
+                <h2>Javascript</h2>
+                <p >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+                </p>
+                <button>Centrar Contenido</button>
+            </div>
+        </main>
+    </div>
+    <script>
+        const button = document.querySelector("button");
+        button.addEventListener("click",()=>{
+            const js = document.querySelector(".js");
+            js.style.textAlign = "center";
+            js.style.backgroundColor = "blue";
+            js.style.color = "white";
+        });
+    </script>
+</body>
+</html>
