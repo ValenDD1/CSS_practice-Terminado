@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@media (prefers-color-scheme: dark){
+    :root{
+        --color-fondo: #050505;
+        --color-texto: #fff;
+    }
+}
+
+@media (prefers-reduced-motion: reduce){
+    :root{
+        --animacion: none;
+    }
+}
+
+@media (prefers-contrast: custom){
+    :root{
+        --contraste:100%;
+    }
+}
+
+
+
+body{
+    background-color: #222;
+    width:100vw;
+    height:100vh;
+}
+
+header{
+    text-align: center;
+    padding-inline: 10px;
+    padding-block: 20px;
+    font-family: monospace;
+}
+
+main{
+    background-color: gray;
+    border:1px solid red;
+}
+
+.caja{
+    container: ejemplo / size ;
+    background-color: navy;
+    width: 200px;
+    height: 200px;
+    color: white;
+
+    & ul{
+        display: flex;
+        flex-flow: row wrap;
+        gap: 10px;
+        list-style: none;
+        color:red;
+
+        @container ejemplo ( width >= 600px) {
+            flex-flow: column wrap;
+            color:blue;
+            align-items: center;
+        }
+
+    }
+}
+
+
+
+
+.caja2{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.caja3{
+    background-color:var(--color-fondo,white);
+    color:var(--color-texto,black);
+}
+
+.caja4{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    color: white;
+
+    span{
+        display: inline-block;
+        animation: var(--animacion,animacion 3s infinite);
+        font-size: 1rem;
+    }
+}
+
+.caja5{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    color: white;
+    filter: contrast(var(--contraste,10%));
+}
+
+@keyframes animacion{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+/*
+el container se puede usar para crear contenedores que se adaptan a diferentes tamaños de pantalla
+pero no se puede manipular el contenido de otras cajas ni de el ,a menos que sean sus hijos o descendientes
+directos
+*/
+@container ejemplo (width <= 600px) {
+    .caja2{
+        background-color: blue;
+    }
+
+    .caja li{
+        background-color: yellowgreen;
+        width:10cqw;
+        height:50cqh;
+    }
+}
+
+
+
+
