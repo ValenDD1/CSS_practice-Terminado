@@ -1,0 +1,53 @@
+body{
+    min-height: 100dvh;
+    background-color: grey;
+    align-content: center;
+    justify-items: center;
+    overflow: hidden;
+}
+
+.eye{
+    width:200px;
+    height: 200px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    border: 1px solid black;
+    position: relative;
+}
+
+.eye::before{
+    content:"";
+    width:70%;
+    height:70%;
+    position: relative;
+    transition: all .5s ease;
+    display: block;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: blueviolet;
+
+}
+
+
+
+.eye::after{
+    content:"";
+    width:30%;
+    height:30%;
+    display: block;
+    border-radius: 50%;
+    background-color: black;
+    transition: all .5s ease;
+    position: absolute;
+    left:50%;
+    translate: -50% 0;
+}
+
+.eye:hover::before{
+    background-color: rebeccapurple;
+}
+
+.eye:hover::after{
+    left:70%;
+}
