@@ -1,0 +1,77 @@
+.container {
+    transform-style: preserve-3d;
+    transform: rotateX(2deg) rotateY(2deg) rotateZ(2deg);
+    perspective: 300px;
+    width: 200px;
+    height: 200px;
+    background-color: blueviolet;
+    border: 1px solid red;
+}
+
+.container-2{
+    transform-style: preserve-3d;
+    width: 200px;
+    height: 200px;
+    border:1px solid;
+    transform: rotateX(2deg) rotateY(2deg) rotateZ(2deg);
+
+    & .element{
+        width: 60%;
+        height: 60%;
+        background-color: red;
+        transform: translate3d(40px, 25px, 55px);
+    }
+}
+
+.container-3{
+    transform-style: preserve-3d;
+    width: 200px;
+    height: 200px;
+    border:1px solid black;
+
+
+    & .element {
+        width: 80%;
+        height: 80%;
+        background-color: red;
+        transform: rotate3d(1, 1, 1, 100deg); 
+    }
+
+}
+
+
+.container-4{
+    transform-style: preserve-3d;
+    width: 200px;
+    height: 200px;
+    border:1px solid black;
+
+    & .element {
+        width: 30%;
+        height: 30%;
+        background-color: red;
+        transform: scale3d(1,1.5,2); 
+    }
+}
+
+
+.container-5{
+    transform-style: preserve-3d;
+    width: 200px;
+    height: 200px;
+    border:1px solid black;
+
+    & .element{
+        width: 30%;
+        height: 30%;
+        background-color: red;
+        transition: all .2s ease;
+        transform: matrix3d(1, 0, 1, 0, 0, 1, 0.5, 0, 0, 0, 1, 0, 50, 50, 0, 1); 
+        transform-origin: 0 0 200px;
+
+        &:hover{
+            transform:matrix(1, 1, -1, 1, 75, 75)
+        }
+    
+    }
+}

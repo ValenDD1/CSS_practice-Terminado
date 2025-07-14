@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flama Realista CSS</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #000428 0%, #004e92 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        .fire-container {
+            position: relative;
+            width: 200px;
+            height: 400px;
+            transform-style: preserve-3d;
+        }
+
+        /* Flama principal */
+        .flame {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 280px;
+            background: radial-gradient(circle at 50% 100%, 
+                #ff6b00 0%, 
+                #ff8500 15%, 
+                #ff9500 30%, 
+                #ffaa00 45%, 
+                #ffcc00 60%, 
+                #ffdd00 75%, 
+                #ffee00 85%, 
+                transparent 100%);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            animation: flicker 0.8s ease-in-out infinite alternate;
+            filter: blur(1px);
+            z-index: 1;
+        }
+
+        /* Capas adicionales de fuego */
+        .flame-layer-1 {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 260px;
+            background: radial-gradient(circle at 50% 100%, 
+                #ff4500 0%, 
+                #ff6500 20%, 
+                #ff8500 40%, 
+                #ffa500 60%, 
+                #ffcc00 80%, 
+                transparent 100%);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            animation: flicker-2 1.2s ease-in-out infinite alternate;
+            filter: blur(0.5px);
+            z-index: 2;
+        }
+
+        .flame-layer-2 {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 240px;
+            background: radial-gradient(circle at 50% 100%, 
+                #ff2500 0%, 
+                #ff4500 25%, 
+                #ff6500 50%, 
+                #ff8500 75%, 
+                #ffaa00 90%, 
+                transparent 100%);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            animation: flicker-3 0.6s ease-in-out infinite alternate;
+            z-index: 3;
+        }
+
+        /* Núcleo interno */
+        .flame-core {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 200px;
+            background: radial-gradient(circle at 50% 100%, 
+                #ff0000 0%, 
+                #ff2500 30%, 
+                #ff4500 60%, 
+                #ff6500 80%, 
+                #ff8500 95%, 
+                transparent 100%);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            animation: core-pulse 0.4s ease-in-out infinite alternate;
+            z-index: 4;
+        }
+
+        /* Chispas y partículas */
+        .spark {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: #ffff00;
+            border-radius: 50%;
+            animation: sparkle 2s linear infinite;
+        }
+
+        .spark-1 {
+            bottom: 180px;
+            left: 40px;
+            animation-delay: 0s;
+        }
+
+        .spark-2 {
+            bottom: 220px;
+            right: 35px;
+            animation-delay: 0.5s;
+        }
+
+        .spark-3 {
+            bottom: 160px;
+            left: 70px;
+            animation-delay: 1s;
+        }
+
+        .spark-4 {
+            bottom: 200px;
+            right: 60px;
+            animation-delay: 1.5s;
+        }
+
+        .spark-5 {
+            bottom: 140px;
+            left: 90px;
+            animation-delay: 0.3s;
+        }
+
+        .spark-6 {
+            bottom: 180px;
+            right: 80px;
+            animation-delay: 0.8s;
+        }
+
+        /* Humo */
+        .smoke {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 80px;
+            background: radial-gradient(circle at 50% 100%, 
+                rgba(100, 100, 100, 0.3) 0%, 
+                rgba(150, 150, 150, 0.2) 30%, 
+                rgba(200, 200, 200, 0.1) 60%, 
+                transparent 100%);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            animation: smoke-rise 3s ease-out infinite;
+            filter: blur(2px);
+        }
+
+        .smoke-2 {
+            left: 40%;
+            width: 35px;
+            height: 70px;
+            animation-delay: 1s;
+        }
+
+        .smoke-3 {
+            left: 60%;
+            width: 30px;
+            height: 60px;
+            animation-delay: 2s;
+        }
+
+        /* Base del fuego */
+        .fire-base {
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 140px;
+            height: 40px;
+            background: radial-gradient(ellipse at center, 
+                #ff2500 0%, 
+                #ff4500 40%, 
+                #ff6500 70%, 
+                transparent 100%);
+            border-radius: 50%;
+            animation: base-glow 1s ease-in-out infinite alternate;
+            filter: blur(3px);
+            z-index: 0;
+        }
+
+        /* Animaciones */
+        @keyframes flicker {
+            0% {
+                transform: translateX(-50%) scaleY(1) scaleX(1);
+                filter: blur(1px) brightness(1);
+            }
+            25% {
+                transform: translateX(-48%) scaleY(1.05) scaleX(0.95);
+                filter: blur(1.2px) brightness(1.1);
+            }
+            50% {
+                transform: translateX(-52%) scaleY(0.95) scaleX(1.05);
+                filter: blur(0.8px) brightness(0.9);
+            }
+            75% {
+                transform: translateX(-49%) scaleY(1.02) scaleX(0.98);
+                filter: blur(1.1px) brightness(1.05);
+            }
+            100% {
+                transform: translateX(-51%) scaleY(0.98) scaleX(1.02);
+                filter: blur(0.9px) brightness(0.95);
+            }
+        }
+
+        @keyframes flicker-2 {
+            0% {
+                transform: translateX(-50%) scaleY(1) scaleX(1) rotate(0deg);
+                filter: blur(0.5px) brightness(1);
+            }
+            33% {
+                transform: translateX(-49%) scaleY(1.03) scaleX(0.97) rotate(1deg);
+                filter: blur(0.7px) brightness(1.1);
+            }
+            66% {
+                transform: translateX(-51%) scaleY(0.97) scaleX(1.03) rotate(-1deg);
+                filter: blur(0.3px) brightness(0.9);
+            }
+            100% {
+                transform: translateX(-50%) scaleY(1.01) scaleX(0.99) rotate(0.5deg);
+                filter: blur(0.6px) brightness(1.05);
+            }
+        }
+
+        @keyframes flicker-3 {
+            0% {
+                transform: translateX(-50%) scaleY(1) scaleX(1) rotate(0deg);
+                filter: brightness(1);
+            }
+            50% {
+                transform: translateX(-49%) scaleY(1.08) scaleX(0.92) rotate(2deg);
+                filter: brightness(1.2);
+            }
+            100% {
+                transform: translateX(-51%) scaleY(0.92) scaleX(1.08) rotate(-2deg);
+                filter: brightness(0.8);
+            }
+        }
+
+        @keyframes core-pulse {
+            0% {
+                transform: translateX(-50%) scaleY(1) scaleX(1);
+                filter: brightness(1);
+            }
+            100% {
+                transform: translateX(-50%) scaleY(1.1) scaleX(0.9);
+                filter: brightness(1.3);
+            }
+        }
+
+        @keyframes sparkle {
+            0% {
+                opacity: 0;
+                transform: translateY(0) scale(0.5);
+            }
+            10% {
+                opacity: 1;
+                transform: translateY(-20px) scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(-60px) scale(0.8);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-120px) scale(0.3);
+            }
+        }
+
+        @keyframes smoke-rise {
+            0% {
+                opacity: 0.3;
+                transform: translateX(-50%) translateY(0) scale(1);
+            }
+            50% {
+                opacity: 0.15;
+                transform: translateX(-45%) translateY(-40px) scale(1.5);
+            }
+            100% {
+                opacity: 0;
+                transform: translateX(-40%) translateY(-80px) scale(2);
+            }
+        }
+
+        @keyframes base-glow {
+            0% {
+                transform: translateX(-50%) scaleY(1) scaleX(1);
+                filter: blur(3px) brightness(1);
+            }
+            100% {
+                transform: translateX(-50%) scaleY(1.1) scaleX(1.1);
+                filter: blur(4px) brightness(1.2);
+            }
+        }
+
+        /* Efectos de resplandor */
+        .fire-container::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, 
+                rgba(255, 100, 0, 0.1) 0%, 
+                rgba(255, 150, 0, 0.05) 50%, 
+                transparent 100%);
+            border-radius: 50%;
+            animation: glow-pulse 2s ease-in-out infinite alternate;
+            pointer-events: none;
+        }
+
+        @keyframes glow-pulse {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.5;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1.2);
+                opacity: 0.8;
+            }
+        }
+
+        .title {
+            position: absolute;
+            bottom: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff6b00;
+            text-shadow: 0 0 20px rgba(255, 107, 0, 0.8);
+            font-family: 'Arial', sans-serif;
+            animation: title-glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes title-glow {
+            0% {
+                text-shadow: 0 0 20px rgba(255, 107, 0, 0.8);
+            }
+            100% {
+                text-shadow: 0 0 30px rgba(255, 107, 0, 1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="fire-container">
+        <!-- Base del fuego -->
+        <div class="fire-base"></div>
+        
+        <!-- Capas de flama -->
+        <div class="flame"></div>
+        <div class="flame-layer-1"></div>
+        <div class="flame-layer-2"></div>
+        <div class="flame-core"></div>
+        
+        <!-- Chispas -->
+        <div class="spark spark-1"></div>
+        <div class="spark spark-2"></div>
+        <div class="spark spark-3"></div>
+        <div class="spark spark-4"></div>
+        <div class="spark spark-5"></div>
+        <div class="spark spark-6"></div>
+        
+        <!-- Humo -->
+        <div class="smoke"></div>
+        <div class="smoke smoke-2"></div>
+        <div class="smoke smoke-3"></div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root{
+    --block:200px;
+    --inline:200px;
+    --radius:50%;
+    --back-color:linear-gradient(indigo,hotpink);
+}
+
+body{
+    background-color: gray;
+    gap:10px;
+    height: 100vh;
+    justify-items: center;
+}
+/* stylelint-disable rule */
+div{
+    background-image: var(--back-color);
+    margin-block: 10px;
+    width: var(--inline);
+    height: var(--block);
+}
+
+.rectangulo{width: calc(var(--inline) * 1.5);}
+
+.circulo{border-radius: var(--radius);}
+
+.triangulo{
+    width: 0;
+    height: 0;
+    border-left: calc(var(--inline) / 1.5) solid transparent;
+    border-right: calc(var(--inline) / 1.5) solid transparent;
+    border-bottom: var(--block) solid indigo;
+}
+
+.message{
+    --inline:200;
+
+    text-align: center;
+    font-size:2rem;
+    clip-path: polygon(0 0, 100% 0 ,100% 50%, 30% 50%, 20% 70%,20% 50% ,0 50%);
+    transform: skewX(calc(var(--inline) * 1deg));
+}
+
+.leaf{border-radius: 0 50%;}
+
+.leaf::before{
+    content:"";
+    display: block;
+    width: 5px;
+    border-radius: 0 / 20% 20% 0 0;
+    height: 200px;
+    position: absolute;
+    left:50%;
+    background-color: hotpink;
+    transform: rotate(-45deg);
+}
+
+.tear{
+    --half-size:calc(var(--inline) / 2);
+
+    background: var(--back-color);
+    border-radius: 50% / 0 0 var(--half-size) var(--half-size);
+    clip-path: polygon(50% 0,100% 100%,0 100%);
+}
+
+.egg{
+    border-radius: 50% / 65% 65% 100px 100px;
+}
+
+.moon{
+    --offset: 100%;
+    --x: 70%;
+    --y: 50%;
+    --double-size:calc(var(--inline) * 1.5);
+
+    width: var(--double-size);
+    height: var(--double-size);
+    border-radius: var(--radius);
+    mask-image: radial-gradient(
+        circle calc(var(--double-size) * 0.45) at var(--x) var(--y),
+        transparent var(--offset),
+        black calc(var(--offset) + 1%)
+    );
+}
+
