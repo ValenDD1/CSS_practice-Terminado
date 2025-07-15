@@ -1,0 +1,68 @@
+@import url("../../Herencia/css/Normalize.css");
+
+.caja{
+    --dark:0%;
+
+    color:color-mix(in srgb, red, black var(--dark));
+    font-size: 20px;
+    background-color: rgb(from gold r g b / calc(var(--dark) + 10%) ) ;
+    width:200px;
+    height: 200px;
+    align-content: center;
+    text-align: center;
+    transition: color 2s,background 4s;
+}
+
+.caja:hover{
+    --dark:15%
+}
+
+@starting-style {
+    p {
+      text-align: end; /* Este sería el estado desde donde "parte" la animación */
+    }
+}
+
+.perro{
+    border:1px solid navy;
+    width: 200px;
+    height: 200px;
+    margin-inline: 10px;
+    padding:10px;
+    overflow: hidden;
+
+    & h1{
+        text-align: center;
+        line-height: 1.5;
+        transition:line-height 1s ease 0.5s normal;
+
+        &:hover{
+            line-height: 3;
+        }
+    }
+
+    & p{
+        text-align: center;
+        text-justify: inter-character;
+        color:red;
+        transition: color 1.5s ease;
+        transition-delay: 2s;
+
+        &:hover{
+            text-align: end;
+            color:aquamarine;
+        }
+    }
+    
+    & div{
+        background-color: darkblue;
+        color:white;
+        transform: translate(0);
+        transition: transform 1.5s ease 1.5s normal;
+
+        &:hover{
+            transform: translate(20%) rotate(34deg);
+        }
+    }
+}
+
