@@ -1,0 +1,34 @@
+@import url("../css/Normalize.css") layer(reset) ;
+
+
+/* layer de niveles 0 1  */
+@layer reset,container;
+
+@layer container{
+    @layer boton-movil,boton;
+    
+    @layer boton{
+        .primary{
+            border-radius: 30px;
+            padding: 20px;
+            border:1px solid darkolivegreen;
+            text-align: center;
+            font-size: .8rem;
+            font-family: monospace,Arial, Helvetica, sans-serif;
+        }
+    }
+
+    @layer boton-movil{
+        .primary{
+            border-radius: 10px;
+            padding: 20px;
+            color: blue;
+            border:5px solid rgb(16 62 77);
+            text-align: center;
+            font-size: .8rem;
+            font-family: monospace,Arial, Helvetica, sans-serif;
+        }
+    }
+}
+
+
