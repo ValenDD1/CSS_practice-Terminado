@@ -77,7 +77,7 @@ div{
     --x: 70%;
     --y: 50%;
     --double-size:calc(var(--inline) * 1.5);
-
+ 
     width: var(--double-size);
     height: var(--double-size);
     border-radius: var(--radius);

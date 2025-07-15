@@ -1,0 +1,37 @@
+.box{
+    color: red;
+}
+
+div {
+    color:blue;
+}
+
+.box [class]:hover{
+    color:aquamarine;
+}
+
+h2 h3::after h1::before{
+    content:"";
+    font-size: larger;
+    display: block;
+}
+
+p:where(#box) > .z:is(.h1,h1){
+    color: yellowgreen;
+}
+
+.bacalao:not(#box .perrito){
+    background-color: indigo;
+}
+
+:blank:has(.perrito #box){
+    background-color: aqua;
+}
+
+h6:has(:where(div)),h6:not(:where(div)) ,h6:is(:where(div)){
+    color:yellow
+}
+
+blockquote :is(div #div){
+    border: 1px solid red;
+}
