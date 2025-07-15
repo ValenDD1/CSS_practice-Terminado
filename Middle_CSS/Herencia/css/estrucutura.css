@@ -1,0 +1,24 @@
+@import url("../css/Normalize.css") (width <= 900px);
+
+.container{
+    color:red;
+    border:1px solid red;
+}
+
+#container{
+    color:green;
+    border: 1px solid steelblue;
+}
+
+div{
+    color:red;
+    border:1px solid rebeccapurple;
+}
+
+/* important */
+.box{
+    all:initial;
+    border:2px solid green !important;
+    color:violet;
+    font-size:1.5rem;
+}

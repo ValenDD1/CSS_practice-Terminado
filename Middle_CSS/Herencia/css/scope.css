@@ -1,0 +1,12 @@
+@import url("../css/Normalize.css");
+
+
+@scope (.container){
+    div{
+        border:2px double gray;
+    }
+
+    p{
+        color: blue;
+    }
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="../css/Reset.css"> -->
+    <link rel="stylesheet" href="../css/Normalize.css">
+</head>
+<body>
+    Estaremos usando el reset de css para resetear los estilos por defecto de los navegadores
+<!-- Este bloque contiene la mayoría de las etiquetas HTML5 para probar el reset CSS -->
+<header>
+    <h1>Encabezado principal (h1)</h1>
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Acerca</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>Sección (h2)</h2>
+        <article>
+            <h3>Artículo (h3)</h3>
+            <p>Este es un <strong>párrafo</strong> con <em>énfasis</em> y un <a href="#">enlace</a>.</p>
+            <p>
+                Etiquetas de texto: <b>negrita</b>, <i>cursiva</i>, <u>subrayado</u>, <mark>marcado</mark>, 
+                <small>pequeño</small>, <del>eliminado</del>, <ins>insertado</ins>, <sub>subíndice</sub>, <sup>superíndice</sup>, <code>código</code>.
+            </p>
+            <blockquote>
+                Esto es una cita (blockquote).
+                <cite>— Autor</cite>
+            </blockquote>
+            <pre>
+function hola() {
+    console.log("Hola mundo");
+}
+            </pre>
+            <figure>
+                <img src="https://via.placeholder.com/150" alt="Imagen de ejemplo">
+                <figcaption>Esto es una imagen con figcaption.</figcaption>
+            </figure>
+            <hr>
+        </article>
+    </section>
+
+    <aside>
+        <h4>Aside (h4)</h4>
+        <p>Contenido relacionado o adicional.</p>
+    </aside>
+
+    <section>
+        <h2>Listas</h2>
+        <ul>
+            <li>Elemento de lista desordenada</li>
+            <li>Otro elemento</li>
+        </ul>
+        <ol>
+            <li>Elemento de lista ordenada</li>
+            <li>Otro elemento</li>
+        </ol>
+        <dl>
+            <dt>Término</dt>
+            <dd>Definición del término</dd>
+        </dl>
+    </section>
+
+    <section>
+        <h2>Tablas</h2>
+        <table>
+            <caption>Ejemplo de tabla</caption>
+            <thead>
+                <tr>
+                    <th>Columna 1</th>
+                    <th>Columna 2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Dato 1</td>
+                    <td>Dato 2</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Pie de tabla</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <section>
+        <h2>Formularios</h2>
+        <form>
+            <fieldset>
+                <legend>Información personal</legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre"><br>
+                <label for="email">Correo:</label>
+                <input type="email" id="email" name="email"><br>
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad"><br>
+                <label for="color">Color favorito:</label>
+                <input type="color" id="color" name="color"><br>
+                <label for="archivo">Archivo:</label>
+                <input type="file" id="archivo" name="archivo"><br>
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha"><br>
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora"><br>
+                <label for="rango">Rango:</label>
+                <input type="range" id="rango" name="rango"><br>
+                <label for="contraseña">Contraseña:</label>
+                <input type="password" id="contraseña" name="contraseña"><br>
+                <label>
+                    <input type="checkbox" name="suscribir"> Suscribirse
+                </label><br>
+                <label>
+                    <input type="radio" name="genero" value="masculino"> Masculino
+                </label>
+                <label>
+                    <input type="radio" name="genero" value="femenino"> Femenino
+                </label><br>
+                <label for="pais">País:</label>
+                <select id="pais" name="pais">
+                    <option value="es">España</option>
+                    <option value="mx">México</option>
+                </select><br>
+                <textarea name="comentario" rows="3" cols="30">Escribe un comentario...</textarea><br>
+                <button type="submit">Enviar</button>
+                <input type="reset" value="Restablecer">
+            </fieldset>
+        </form>
+    </section>
+
+    <section>
+        <h2>Elementos multimedia</h2>
+        <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+        <video width="320" height="240" controls>
+            <source src="video.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+        <canvas width="100" height="100" style="border:1px solid #000000;">
+            Tu navegador no soporta el elemento canvas.
+        </canvas>
+        <svg width="100" height="100">
+            <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+        </svg>
+        <embed src="https://www.example.com" width="100" height="50">
+        <object data="https://www.example.com" width="100" height="50"></object>
+        <iframe src="https://www.example.com" width="100" height="50" title="iframe de ejemplo"></iframe>
+    </section>
+
+    <section>
+        <h2>Otras etiquetas</h2>
+        <details>
+            <summary>Haz clic para ver más</summary>
+            <p>Este es el contenido oculto dentro de details.</p>
+        </details>
+        <progress value="70" max="100">70%</progress>
+        <meter value="0.6">60%</meter>
+        <time datetime="2024-06-01">1 de junio de 2024</time>
+        <output>Resultado</output>
+        <data value="42">Cuarenta y dos</data>
+        <samp>Salida de muestra</samp>
+        <kbd>Ctrl + S</kbd>
+        <var>x</var>
+        <abbr title="HyperText Markup Language">HTML</abbr>
+        <address>
+            Calle Falsa 123<br>
+            Ciudad, País
+        </address>
+        <wbr>
+        <ruby>
+            漢 <rt>Kan</rt>
+            字 <rt>Ji</rt>
+        </ruby>
+        <bdi>Texto en otro idioma: العربية</bdi>
+        <bdo dir="rtl">Texto de derecha a izquierda</bdo>
+        <template>
+            <p>Esto es una plantilla (template).</p>
+        </template>
+        <noscript>Este mensaje aparece si JavaScript está deshabilitado.</noscript>
+        <mark>Texto resaltado</mark>
+    </section>
+</main>
+
+<footer>
+    <p>Pie de página (footer)</p>
+</footer>
+
+</body>
+</html>
