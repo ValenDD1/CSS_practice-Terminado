@@ -202,6 +202,26 @@ body{
 }
 
 
+.poligon{
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+    clip-path: none;
+    transition: clip-path 1.5s ease;
+    animation: mutant 5s ease-in-out 0s infinite alternate;
+}
 
+@keyframes mutant {
+    0%{
+        clip-path: polygon(50% 0 ,100% 100%, 0 100%);
+    }
 
+    50%{
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    }
+
+    100%{
+        clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+    }
+}
 
