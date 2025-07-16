@@ -1,5 +1,29 @@
 @import url("../../Herencia/css/Normalize.css");
 
+body{
+    box-sizing: border-box;
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+
+    @starting-style{
+        opacity: 0;
+    }
+}
+
+main{
+    background-color: gray;
+    height: 100vh;
+    overflow: hidden;
+    transition: all 1s ease;
+
+    @starting-style{
+        height: 0;
+    }
+    
+}
+
 .caja{
     --dark:0%;
 
@@ -24,12 +48,21 @@
 }
 
 .perro{
-    border:1px solid navy;
+    /* cortamos el border para que sea animado */
+    border-style: solid;
+    border-color: navy;
+    border-width:1px;
     width: 200px;
     height: 200px;
     margin-inline: 10px;
     padding:10px;
     overflow: hidden;
+
+    /* agregado transition */
+    transition-property: border-width,border-color ;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+
 
     & h1{
         text-align: center;
@@ -64,5 +97,25 @@
             transform: translate(20%) rotate(34deg);
         }
     }
+
+    &:hover{
+        border-width: 4px;
+        border-color:blueviolet;
+    }
 }
+
+.caja-2{
+    border-width: 4px;
+    border-style: dashed;
+    border-color: blueviolet;
+    transition: 
+        border-color 1s ease,
+        border-width 1.5s ease;
+        
+    &:hover{
+        border-width: 6px;
+        border-color: aqua;   
+    }
+}
+
 
