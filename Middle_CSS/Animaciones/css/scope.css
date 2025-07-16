@@ -1,0 +1,34 @@
+body {
+    max-height: 500px;
+}
+
+.container{
+    timeline-scope: --rotate-timeline;
+}
+  
+  .scroll {
+    background: grey;
+    width: 90%;
+    height: 150px;
+    font-size: 8rem;
+    overflow: hidden scroll;
+    scroll-timeline: --rotate-timeline;
+  }
+  
+  .box {
+    width: 75px;
+    height: 75px;
+    background: indigo;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    animation: rotate linear both;
+    animation-timeline: --rotate-timeline;
+    animation-range: entry 50% exit 70%;
+  }
+  
+  @keyframes rotate {
+    from { rotate: 0deg; opacity: 1; }
+    to { rotate: 360deg; opacity: 0; }
+  }
+  
