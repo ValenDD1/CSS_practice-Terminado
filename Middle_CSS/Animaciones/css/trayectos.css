@@ -1,0 +1,131 @@
+@import url("../../Herencia/css/Normalize.css");
+
+body{
+    opacity: 1;
+
+    @starting-style{
+        opacity:0;
+    }
+}
+
+.ejemplo{
+    --triangulo:polygon(50% 0%, 0% 100%, 100% 100%);
+    --manz:polygon(0 0, 350px 0, 350px 100px, 0 100px);
+
+    width: 50px;
+    height: 50px;
+    border-top: 5px solid hotpink;
+    background: indigo url("../robot.avif");
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    offset-path: var(--manz);
+    offset-rotate: 180deg;
+    offset-anchor: 10% 10%;
+    animation: ruta 5s ease 0s infinite;
+
+    &:hover{
+        border-radius: 50%;
+        animation-play-state: paused;
+    }
+}
+
+
+.container{
+    width:200px;
+    margin: 50px;
+    height: 200px;
+    background-color: gray;
+    transition: width 2s ease;
+
+    &:hover{
+        width:500px;
+    }
+}
+
+
+
+
+@keyframes ruta {
+    0%{
+        offset-distance: 0%;
+    }
+
+    100%{
+        offset-distance: 100%;
+        offset-rotate: 90deg;
+    }
+}
+
+:where(.box1,.box2,.box3){
+    width: 30px;
+    height:30px;
+    background-color: aqua;
+    animation: move 2s alternate infinite;
+    offset-path: ray(90deg);
+}
+
+.box1{
+    background-color: red;
+    offset-path: ray(90deg closest-side contain );
+}
+
+.box2{
+    background-color: yellowgreen;
+    offset-path: ray(180deg at 200px);
+}
+
+.box3{
+    background-color: chartreuse;
+    offset-path: ray(270deg);
+    
+}
+
+@keyframes move {
+    0% { offset-distance: 0%; }
+    100% { offset-distance: 100%; }
+}
+
+.container-2,.container-3{
+    background-color: goldenrod;
+    border:1px solid red;
+    width:300px;
+    height:300px;
+
+    & .ejemplo-2{
+        width:40px;
+        height:40px;
+        background-color: blueviolet;
+        offset-path: ray(299deg farthest-side  contain);
+        offset-position: 50% 20%;
+        animation: move-position 2s ease 0s infinite alternate;
+    }
+}
+
+@keyframes move-position {
+    to{
+        offset-position: 100% 100%;
+    }
+}
+
+.cajita{
+    width:30px;
+    height:30px;
+    background: red;
+    offset-path: path("M 0 0 L 200 0 L 200 200 L 102 30 Z V 154 C 48.3333 161.6667 96.6667 169.3333 145 177");
+    animation: move-path 3s ease 0s infinite alternate;
+}
+
+@keyframes move-path {
+    from{
+        offset-distance: 0%;
+    }
+
+    to{
+        offset-distance: 100%;
+    }
+}
+
+
+
+

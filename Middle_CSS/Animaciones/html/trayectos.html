@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/trayectos.css">
+</head>
+<body>
+    Trayectos
+    <div class="container">
+        <div class="ejemplo">
+        </div>
+    </div> 
+
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+
+    <div class="container-2">
+        <div class="ejemplo-2"></div>
+    </div>
+
+    <div class="container-3">
+        <div class="cajita"></div>
+    </div>
+    
+    <div class="template">
+        <template id="template" shadowrootmode="open">
+            <style>
+                .box {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  animation: move 3s alternate infinite;
+}
+.box-1 {
+  background: indigo;
+  offset-path: url("#first");
+}
+.box-2 {
+  background: teal;
+  offset-path: url("#second");
+}
+
+@keyframes move {
+  0% { offset-distance: 0%; }
+  100% { offset-distance: 100%; }
+}
+
+body {
+  margin: 2.5rem;
+  min-height: 225px;
+}
+
+svg {
+  position: absolute;
+}
+            </style>
+            <svg width="450" height="200" viewBox="0 0 450 200">
+                <path id="first"
+                    fill="none" stroke="#000" stroke-width="2"
+                    d="M0,0 L200,0 L200,200 L0,0 Z" />
+                <path
+                    id="second" fill="none" stroke="#000" stroke-width="2"
+                    d="M250,0 L450,0 L250,200 L250,0 Z" />
+            </svg>
+            <div class="container-5">
+                <div class="box box-1"></div>
+                <div class="box box-2"></div>
+            </div>
+        </template>
+    </div>
+</body>
+</html>

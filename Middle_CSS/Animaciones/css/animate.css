@@ -1,0 +1,227 @@
+@import url("../../Herencia/css/Normalize.css");
+
+body{
+    padding: 10px;
+}
+
+.box{
+    --bg-color:red;
+
+    width:200px;
+    height:200px;
+    background-color: var(--bg-color);
+    animation-name: rgb-colors ;
+    animation-duration: 5s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+}
+
+
+@property --bg-color {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: red;
+}
+
+
+@keyframes rgb-colors {
+    0%{--bg-color:blue;}
+    25%{--bg-color:green;}
+    45%{--bg-color:yellow;}
+    65%{--bg-color:hotpink;}
+    85%{--bg-color:navy;}
+    100%{--bg-color:rgb(197 78 48);}
+}
+
+
+.box-2{
+    width:200px;
+    height:200px;
+    background-color:red;
+    animation: expandir 2s ease 0s infinite alternate ;
+}
+
+@keyframes expandir {
+    to{
+        width: 400px;
+        opacity: 0.2;
+    }
+}
+
+.box-3{
+    width:200px;
+    height:200px;
+    background-color: navy;
+    color:red;
+    animation: 
+        t-r 2s ease 1s infinite alternate ;
+}
+
+.box-3:hover{
+    animation-play-state: paused;    
+}
+
+@keyframes t-r{
+    0%{
+        transform: translate(0) rotate(0);
+    }
+
+    100%{
+        transform: translate(500px) rotate(360deg);
+    }
+
+}
+
+.box-4{
+    border-radius: 10px;
+    background-color: brown;
+    width: 200px;
+    height: 200px;
+    animation:circle 3s infinite alternate;
+}
+
+@keyframes circle {
+    0%{
+        border-radius: 50%;
+    }
+
+    20%{
+        border-radius: 50% / 200px 200px 0 0;
+    }
+
+    100%{
+        border-radius: 100px 200px 300px 0 / 50%;
+    }
+}
+
+.box-5{
+    width: 300px;
+    height: 300px;
+    animation: composition 1s ease infinite alternate;
+    animation-composition: add;
+}
+
+@keyframes composition {
+    0%{
+        background-color: red;
+    }
+
+    100%{
+        background-color: blue;
+    }
+}
+
+
+.element {
+    width: 100px;
+    height: 100px;
+    background: grey;
+    animation-composition: accumulate;
+    animation:
+        move 3s ease 0s infinite,
+        rotate 3s ease 3s infinite;
+}
+
+@keyframes move {
+    to {
+        transform: translateX(500px);
+        background: red;
+    }
+}
+
+
+@keyframes rotate {
+    to {
+        transform:  rotate(360deg) scale(0.5);
+        background: indigo;
+    }
+}
+
+
+.sprite{
+    background-image: url("../Patita.png");
+    width: 112px;
+    height:156px;
+    border: 1px solid black;
+    background-position: 0 0;
+    animation:
+        sprite  0.75s steps(6) 0s infinite,
+        move-sprite 5s linear  infinite,
+        left-sprite 5s steps(1)   infinite ;
+}
+
+.sprite:hover{border-radius: 50%;}
+
+@keyframes sprite {
+    to{
+        background-position: -672px;
+    }
+}
+
+@keyframes move-sprite {
+    0%,100%{transform: translate(0);}
+    50%{translate: 500px;}
+    
+}
+
+@keyframes left-sprite{
+    0%{
+        scale: 1 1;
+    }
+
+    50%{
+        scale: -1 1;
+    }
+}
+
+
+.megaman{
+    --position:0 ;
+
+    background-position: 0 var(--position);
+    background-image: url("../megaman.jpeg");
+    width: 125px;
+    height: 144px;
+    animation: 
+        sprite-megaman 0.5s steps(5) infinite,
+        move-sprite 5s linear infinite,
+        left-sprite 5s steps(1) infinite ; 
+}
+
+.megaman:hover{
+    --position:100%;
+}
+
+@keyframes sprite-megaman {
+    0%{
+        background-position: -660px var(--position);
+    }
+}
+
+
+.poligon{
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+    clip-path: none;
+    transition: clip-path 1.5s ease;
+    animation: mutant 5s ease-in-out 0s infinite alternate;
+}
+
+@keyframes mutant {
+    0%{
+        clip-path: polygon(50% 0 ,100% 100%, 0 100%);
+    }
+
+    50%{
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    }
+
+    100%{
+        clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+    }
+}
+

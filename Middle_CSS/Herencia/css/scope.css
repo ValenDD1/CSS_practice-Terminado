@@ -10,3 +10,22 @@
         color: blue;
     }
 }
+
+
+@scope (.clases) to (.madre > *){
+    h1{
+        color:green;
+    }
+
+    :scope > .container-2{
+        border:1px solid red;
+    }
+
+    .madre{
+        border:1px solid red;
+    }
+}
+
+.box{
+    background-color: aqua;
+}
