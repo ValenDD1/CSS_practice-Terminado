@@ -1,3 +1,5 @@
+@import url("../css/view.css");
+
 body {
     max-height: 500px;
 }
@@ -5,15 +7,15 @@ body {
 .container{
     timeline-scope: --rotate-timeline;
 }
-  
-  .scroll {
+
+.scroll {
     background: grey;
     width: 90%;
     height: 150px;
     font-size: 8rem;
     overflow: hidden scroll;
     scroll-timeline: --rotate-timeline;
-  }
+}
   
   .box {
     width: 75px;
