@@ -1,0 +1,99 @@
+@import url("../../Herencia/css/Normalize.css");
+
+body{
+    min-height: 100vh;
+    animation: cambio-body linear forwards;
+    scroll-timeline: --color-timeline block;
+    animation-timeline: scroll(root block) ;
+}
+
+@keyframes cambio-body {
+    from{
+        background-color: white;
+        color:#000;
+    }
+
+    to{
+        background-color: #000;
+        color:#fff;
+    }
+}
+
+
+.container{
+    margin-block:100px;
+    margin-inline: 50px;
+    border-radius:10px;
+    border: 1px solid navy;
+    text-align: center;
+    font-size: 3rem;
+    padding-inline: 150px;
+}
+
+
+
+
+.content-bar{
+    width: 100%;
+}
+
+.bar{
+    width:0;
+    height: 15px;
+    background-color: orangered;
+    box-shadow: 0 0 5px darkred;
+    position:fixed;
+    inset: 0;
+    animation: resize linear forwards;
+    animation-timeline: scroll(root block);
+}
+
+
+@keyframes resize {
+    100%{
+        width: 100%;
+    }
+}
+
+.container-2{
+    width: 100px;
+    height: 100px;
+    text-wrap: nowrap;
+    overflow: scroll hidden;
+    animation: cambio linear ;
+    border: 1px solid red;
+    animation-timeline: scroll(self inline) ;
+}
+
+@keyframes cambio{
+    0%{
+        background-color: aliceblue;
+    }
+
+    100%{
+        background: indianred;
+    }
+}
+
+.view{
+    margin: auto;
+    width:200px;
+    height: 200px;
+    border-radius: 30px;
+    background-color: brown;
+    animation: opacidad linear ;
+    animation-timeline: view(block 100% auto );
+}
+
+@keyframes opacidad {
+    from{
+        opacity: 0;
+        scale:1.5;
+    }
+
+    to{
+        opacity: 1;
+        scale:1;
+    }
+}
+
