@@ -1,7 +1,8 @@
 
 # Practica de CSS: Desde Cero a Avanzado 🚀  
+<p style="color:red ">Terminado 🎉</p>
 
-**Dominando el diseño web con CSS moderno, Flexbox, Grid, anchores ,etc **
+ **Dominando el diseño web con CSS moderno, Flexbox, Grid, anchores ,etc **
 
 retroalimentacion del lenguaje de estilos 'css'(cascading styles sheets)
 ## 🎨 Galería de Records
