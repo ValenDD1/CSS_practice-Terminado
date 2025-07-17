@@ -1,4 +1,5 @@
 @import url("../../Herencia/css/Normalize.css");
+@import url("../css/view.css");
 
 body{
     padding: 10px;
