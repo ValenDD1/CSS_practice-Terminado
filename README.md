@@ -10,6 +10,8 @@ retroalimentacion del lenguaje de estilos 'css'(cascading styles sheets)
   <img width="300" height="300" alt="image" title="Flex CSS"  src="https://github.com/user-attachments/assets/e7c03e7c-5605-4fd3-a09e-c2e9201e796b" />
   <img width="300" height="300" alt="image" title="Grid CSS" src="https://github.com/user-attachments/assets/fe86db3e-a123-4d1a-9da1-31aabb99a103" />
   <img width="300" height="300" alt="image" title="anchores CSS" src="https://github.com/user-attachments/assets/f9cce051-0ca7-45cf-be23-d63ab9708233" />
+  <img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/6baecf9e-44bb-4c7e-b761-d8e10cf68d48" />
+
 </div>
 
 ## Acceso a Pestañas CSS 🖊
